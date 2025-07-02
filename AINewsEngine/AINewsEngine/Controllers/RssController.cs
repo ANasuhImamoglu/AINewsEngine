@@ -1,4 +1,4 @@
-﻿namespace AINewsEngine.Controllers;
+﻿// ... using ifadeleri ...
 
 using AINewsEngine.Service;
 using Microsoft.AspNetCore.Mvc;
@@ -14,35 +14,19 @@ public class RssController : ControllerBase
         _rssService = rssService;
     }
 
-    // POST: api/Rss/CekVeKaydet
-    // Body'de gönderilen URL'deki haberleri çeker ve kaydeder.
     [HttpPost("CekVeKaydet")]
     public async Task<IActionResult> CekVeKaydet([FromBody] RssRequest request)
     {
-        if (string.IsNullOrEmpty(request.FeedUrl) || !Uri.IsWellFormedUriString(request.FeedUrl, UriKind.Absolute))
+        if (string.IsNullOrEmpty(request.FeedUrl) || !Uri.IsWellFormedUriString(request.FeedUrl, UriKind.Absolute) || request.KategoriId <= 0)
         {
-            return BadRequest("Geçerli bir RSS URL'i göndermelisiniz.");
+            return BadRequest(new { message = "Geçerli bir 'FeedUrl' ve sıfırdan büyük bir 'KategoriId' göndermelisiniz." });
         }
-
-        try
-        {
-            var yeniHaberler = await _rssService.CekVeKaydetAsync(request.FeedUrl);
-
-            if (!yeniHaberler.Any())
-            {
-                return Ok(new { message = "Tüm haberler zaten güncel. Yeni haber eklenmedi." });
-            }
-
-            return Ok(new { message = $"{yeniHaberler.Count} yeni haber başarıyla eklendi.", data = yeniHaberler });
-        }
-        catch (Exception ex)
-        {
-            // Servis katmanında yakalanamayan beklenmedik hatalar için
-            return StatusCode(500, $"Sunucu hatası: {ex.Message}");
-        }
+        // ...
+        var yeniHaberler = await _rssService.CekVeKaydetAsync(request.FeedUrl, request.KategoriId);
+        // ...
+        return Ok(new { message = $"{yeniHaberler.Count} yeni haber başarıyla eklendi.", data = yeniHaberler });
     }
 }
 
-// Body'den gelecek JSON verisini karşılamak için basit bir kayıt (record)
-public record RssRequest(string FeedUrl);
-
+// DEĞİŞİKLİK: Kategori adı yerine KategoriId alıyoruz.
+public record RssRequest(string FeedUrl, int KategoriId);

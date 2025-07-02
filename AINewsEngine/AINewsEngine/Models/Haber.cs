@@ -1,35 +1,27 @@
-﻿namespace AINewsEngine.Models;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-// Bu dosya genellikle projenizin "Models" klasöründe yer alır.
-public class Haber
+namespace AINewsEngine.Models
 {
-    // Id INTEGER PRIMARY KEY AUTOINCREMENT
-    [Key]
-    public int Id { get; set; }
-
-    // Baslik TEXT NOT NULL
-    [Required(ErrorMessage = "Haber başlığı boş bırakılamaz.")]
-    public string Baslik { get; set; }
-
-    // Icerik TEXT
-    public string? Icerik { get; set; } // Null olabilir
-
-    // ResimUrl TEXT
-    public string? ResimUrl { get; set; } // Null olabilir
-
-    // YayinTarihi DATETIME
-    public DateTime YayinTarihi { get; set; }
-
-    // Onaylandi BOOLEAN DEFAULT FALSE
-    public bool Onaylandi { get; set; }
-
-    // Veritabanına yeni bir kayıt eklenirken varsayılan değerleri atamak için constructor.
-    public Haber()
+    public class Haber
     {
-        Baslik = string.Empty; // Required alanlar için null hatası almamak adına
-        YayinTarihi = DateTime.Now;
-        Onaylandi = false;
+        [Key]
+        public int Id { get; set; }
+        [Required]
+        public string Baslik { get; set; } = string.Empty;
+        public string? Icerik { get; set; }
+        public string? ResimUrl { get; set; }
+        public DateTime YayinTarihi { get; set; }
+        public bool Onaylandi { get; set; }
+
+        // --- DEĞİŞİKLİKLER BURADA ---
+        // Eski string Kategori alanı kaldırıldı.
+
+        // YENİ: Kategori tablosuna referans için Foreign Key
+        public int KategoriId { get; set; }
+
+        // YENİ: Entity Framework'ün ilişkiyi anlaması için Navigation Property
+        [ForeignKey("KategoriId")]
+        public Kategori? Kategori { get; set; }
     }
 }
-

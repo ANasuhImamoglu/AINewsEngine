@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AINewsEngine.Migrations
 {
     [DbContext(typeof(VeritabaniContext))]
-    [Migration("20250630130941_HaberlerTablosuOlustur")]
-    partial class HaberlerTablosuOlustur
+    [Migration("20250702071410_YeniKurulum")]
+    partial class YeniKurulum
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,6 +33,9 @@ namespace AINewsEngine.Migrations
                     b.Property<string>("Icerik")
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("KategoriId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<bool>("Onaylandi")
                         .HasColumnType("INTEGER");
 
@@ -44,7 +47,40 @@ namespace AINewsEngine.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("KategoriId");
+
                     b.ToTable("Haberler");
+                });
+
+            modelBuilder.Entity("AINewsEngine.Models.Kategori", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Ad")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Kategoriler");
+                });
+
+            modelBuilder.Entity("AINewsEngine.Models.Haber", b =>
+                {
+                    b.HasOne("AINewsEngine.Models.Kategori", "Kategori")
+                        .WithMany("Haberler")
+                        .HasForeignKey("KategoriId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Kategori");
+                });
+
+            modelBuilder.Entity("AINewsEngine.Models.Kategori", b =>
+                {
+                    b.Navigation("Haberler");
                 });
 #pragma warning restore 612, 618
         }
