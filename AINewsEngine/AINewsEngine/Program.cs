@@ -45,7 +45,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 // --- YENİ: CORS Politikasını Uyguluyoruz ---
 // Bu satır, UseRouting ve UseAuthorization arasında olmalıdır.
