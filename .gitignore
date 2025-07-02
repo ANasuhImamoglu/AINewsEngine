@@ -1,1 +1,4 @@
 .vs/
+*.db
+AINewsEngine/AINewsEngine/AiNewsEngine.db-shm
+AINewsEngine/AINewsEngine/AiNewsEngine.db-wal

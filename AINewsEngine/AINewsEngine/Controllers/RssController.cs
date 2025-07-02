@@ -1,4 +1,5 @@
 ﻿namespace AINewsEngine.Controllers;
+
 using AINewsEngine.Service;
 using Microsoft.AspNetCore.Mvc;
 

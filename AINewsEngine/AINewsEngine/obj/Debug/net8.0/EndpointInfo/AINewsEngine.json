@@ -189,6 +189,37 @@
           }
         }
       }
+    },
+    "/api/Rss/CekVeKaydet": {
+      "post": {
+        "tags": [
+          "Rss"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RssRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RssRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RssRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -221,6 +252,16 @@
           },
           "onaylandi": {
             "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RssRequest": {
+        "type": "object",
+        "properties": {
+          "feedUrl": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
