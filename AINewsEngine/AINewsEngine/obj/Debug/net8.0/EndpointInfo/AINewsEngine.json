@@ -190,6 +190,90 @@
         }
       }
     },
+    "/api/Kategoriler": {
+      "get": {
+        "tags": [
+          "Kategoriler"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Kategori"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Kategori"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Kategori"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Kategoriler"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Kategori"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Kategori"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Kategori"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Kategori"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Kategori"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Kategori"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/Rss/CekVeKaydet": {
       "post": {
         "tags": [
@@ -252,6 +336,37 @@
           },
           "onaylandi": {
             "type": "boolean"
+          },
+          "kategoriId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "kategori": {
+            "$ref": "#/components/schemas/Kategori"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Kategori": {
+        "required": [
+          "ad"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ad": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "haberler": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Haber"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -262,6 +377,10 @@
           "feedUrl": {
             "type": "string",
             "nullable": true
+          },
+          "kategoriId": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
