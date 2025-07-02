@@ -1,48 +1,59 @@
-using AINewsEngine.Data;
+ï»¿using AINewsEngine.Data;
+using AINewsEngine.Service;
 using Microsoft.EntityFrameworkCore;
 
-// 1. UYGULAMAYI OLUÞTURMA VE YAPILANDIRMA
+// 1. UYGULAMAYI OLUï¿½TURMA VE YAPILANDIRMA
 var builder = WebApplication.CreateBuilder(args);
 
-// 2. SERVÝSLERÝ BAÐIMLILIK EKLEME (DEPENDENCY INJECTION) KONTEYNERÝNE EKLEME
+// 2. SERVï¿½SLERï¿½ BAï¿½IMLILIK EKLEME (DEPENDENCY INJECTION) KONTEYNERï¿½NE EKLEME
 
-// Connection string'i appsettings.json dosyasýndan alýyoruz.
-// "DefaultConnection" isminin appsettings.json'daki ile ayný olduðundan emin olun.
+// Connection string'i appsettings.json dosyasï¿½ndan alï¿½yoruz.
+// "DefaultConnection" isminin appsettings.json'daki ile aynï¿½ olduï¿½undan emin olun.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
-// VeritabaniContext'i projenin servisleri arasýna ekliyoruz.
-// Entity Framework Core'a bu context'in bir SQLite veritabaný kullanacaðýný söylüyoruz.
+// VeritabaniContext'i projenin servisleri arasï¿½na ekliyoruz.
+// Entity Framework Core'a bu context'in bir SQLite veritabanï¿½ kullanacaï¿½ï¿½nï¿½ sï¿½ylï¿½yoruz.
 builder.Services.AddDbContext<VeritabaniContext>(options =>
     options.UseSqlite(connectionString));
 
-// Controller'larý servis olarak ekliyoruz. Bu, API controller'larýnýn çalýþmasý için gereklidir.
+// Controller'larï¿½ servis olarak ekliyoruz. Bu, API controller'larï¿½nï¿½n ï¿½alï¿½ï¿½masï¿½ iï¿½in gereklidir.
 builder.Services.AddControllers();
 
-// API'yi test etmek ve belgelemek için Swagger/OpenAPI servisini ekliyoruz.
-// Geliþtirme ortamýnda çok faydalýdýr.
+// HttpClientFactory'yi ekliyoruz. Bu, HTTP isteklerini yï¿½netmek iï¿½in en iyi yoldur.
+builder.Services.AddHttpClient();
+
+// LlmService artÄ±k OpenRouter'a gÃ¶re Ã§alÄ±ÅŸtÄ±ÄŸÄ± iÃ§in sistem sorunsuz Ã§alÄ±ÅŸacaktÄ±r.
+builder.Services.AddScoped<ILlmService, LlmService>();
+
+// Kendi oluï¿½turduï¿½umuz RSS servisini projemize tanï¿½tï¿½yoruz.
+// Birisi IRssService istediï¿½inde, ona RssService'in bir ï¿½rneï¿½ini ver.
+builder.Services.AddScoped<IRssService, RssService>();
+
+// API'yi test etmek ve belgelemek iï¿½in Swagger/OpenAPI servisini ekliyoruz.
+// Geliï¿½tirme ortamï¿½nda ï¿½ok faydalï¿½dï¿½r.
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // 3. UYGULAMAYI DERLEME
 var app = builder.Build();
 
-// 4. HTTP ÝSTEK PÝPELINE'INI YAPILANDIRMA (Middleware)
+// 4. HTTP ï¿½STEK Pï¿½PELINE'INI YAPILANDIRMA (Middleware)
 
-// Sadece geliþtirme ortamýndayken Swagger'ý ve Swagger UI'ý etkinleþtiriyoruz.
+// Sadece geliï¿½tirme ortamï¿½ndayken Swagger'ï¿½ ve Swagger UI'ï¿½ etkinleï¿½tiriyoruz.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-// Gelen HTTP isteklerini otomatik olarak HTTPS'e yönlendirir.
+// Gelen HTTP isteklerini otomatik olarak HTTPS'e yï¿½nlendirir.
 app.UseHttpsRedirection();
 
-// Yetkilendirme (Authorization) ara katmanýný etkinleþtirir.
+// Yetkilendirme (Authorization) ara katmanï¿½nï¿½ etkinleï¿½tirir.
 app.UseAuthorization();
 
-// Gelen istekleri doðru controller'daki doðru action'a yönlendirmek için rotalarý eþler.
+// Gelen istekleri doï¿½ru controller'daki doï¿½ru action'a yï¿½nlendirmek iï¿½in rotalarï¿½ eï¿½ler.
 app.MapControllers();
 
-// 5. UYGULAMAYI ÇALIÞTIRMA
+// 5. UYGULAMAYI ï¿½ALIï¿½TIRMA
 app.Run();

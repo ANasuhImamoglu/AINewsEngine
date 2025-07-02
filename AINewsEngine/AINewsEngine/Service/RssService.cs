@@ -1,94 +1,93 @@
-﻿namespace AINewsEngine.Service;
-using AINewsEngine.Data;
-using AINewsEngine.Models;
-using Microsoft.EntityFrameworkCore;
-using System.ServiceModel.Syndication;
+﻿using System.ServiceModel.Syndication;
+using System.Text.RegularExpressions;
 using System.Xml;
+using Microsoft.EntityFrameworkCore;
+using AINewsEngine.Models;
+using AINewsEngine.Data;
 
-public class RssService : IRssService
+namespace AINewsEngine.Service
 {
-    private readonly VeritabaniContext _context;
-    private readonly IHttpClientFactory _httpClientFactory;
-
-    public RssService(VeritabaniContext context, IHttpClientFactory httpClientFactory)
+    public class RssService : IRssService
     {
-        _context = context;
-        _httpClientFactory = httpClientFactory;
-    }
+        private readonly VeritabaniContext _context;
+        private readonly IHttpClientFactory _httpClientFactory;
+        private readonly ILlmService _llmService;
 
-    public async Task<List<Haber>> CekVeKaydetAsync(string rssUrl)
-    {
-        // === DEBUG ADIM 1: Metodun başladığını görelim ===
-        Console.WriteLine($"--- RSS Çekme İşlemi Başladı: {rssUrl} ---");
-
-        var yeniEklenenHaberler = new List<Haber>();
-        var httpClient = _httpClientFactory.CreateClient("RssClient");
-
-        try
+        public RssService(VeritabaniContext context, IHttpClientFactory httpClientFactory, ILlmService llmService)
         {
-            var stream = await httpClient.GetStreamAsync(rssUrl);
-            using var xmlReader = XmlReader.Create(stream);
-            var feed = SyndicationFeed.Load(xmlReader);
+            _context = context;
+            _httpClientFactory = httpClientFactory;
+            _llmService = llmService;
+        }
 
-            // === DEBUG ADIM 2: RSS kaynağından kaç haber geldiğini görelim (EN ÖNEMLİ ADIM) ===
-            Console.WriteLine($"RSS kaynağından {feed.Items.Count()} adet öğe bulundu.");
+        public async Task<List<Haber>> CekVeKaydetAsync(string rssUrl)
+        {
+            var yeniEklenenHaberler = new List<Haber>();
 
-            if (!feed.Items.Any())
+            // YENİ: Yapay zeka tarafından işlenen haber sayısını tutmak için bir sayaç
+            int islenenHaberSayisi = 0;
+            const int haberLimiti = 5; // Limiti buradan kolayca değiştirebilirsiniz
+
+            try
             {
-                Console.WriteLine("UYARI: RSS kaynağı boş veya öğe bulunamadı. İşlem sonlandırılıyor.");
-                return yeniEklenenHaberler; // Boş listeyi hemen döndür.
-            }
+                var httpClient = _httpClientFactory.CreateClient("RssClient");
+                var stream = await httpClient.GetStreamAsync(rssUrl);
+                using var xmlReader = XmlReader.Create(stream);
+                var feed = SyndicationFeed.Load(xmlReader);
 
-            foreach (var item in feed.Items)
-            {
-                var haberBasligi = item.Title?.Text;
-
-                // === DEBUG ADIM 3: Her bir haberin başlığını görelim ===
-                Console.WriteLine($"İşlenen başlık: {haberBasligi}");
-
-                if (string.IsNullOrWhiteSpace(haberBasligi))
+                foreach (var item in feed.Items)
                 {
-                    Console.WriteLine("UYARI: Başlığı olmayan bir öğe atlandı.");
-                    continue; // Başlığı yoksa bu öğeyi atla ve döngüye devam et.
-                }
-
-                bool haberMevcut = await _context.Haberler.AnyAsync(h => h.Baslik == haberBasligi);
-
-                if (!haberMevcut)
-                {
-                    // === DEBUG ADIM 4: Sadece yeni bir haber eklenirken bunu görelim ===
-                    Console.WriteLine($"--> YENİ HABER EKLENİYOR: {haberBasligi}");
-
-                    var yeniHaber = new Haber
+                    // DEĞİŞİKLİK: Eğer 5 yeni haber işlediysek, döngüyü tamamen durdur.
+                    if (islenenHaberSayisi >= haberLimiti)
                     {
-                        Baslik = haberBasligi,
-                        Icerik = item.Summary?.Text ?? (item.Content as TextSyndicationContent)?.Text,
-                        YayinTarihi = item.PublishDate.DateTime,
-                        ResimUrl = item.Links.FirstOrDefault(l => l.MediaType?.StartsWith("image/") ?? false)?.Uri.ToString(),
-                        Onaylandi = true
-                    };
-                    yeniEklenenHaberler.Add(yeniHaber);
+                        Console.WriteLine($"--> SINIR: {haberLimiti} yeni haber işlendi, işlem durduruluyor.");
+                        break; // foreach döngüsünden çık
+                    }
+
+                    var orijinalBaslik = item.Title?.Text;
+                    if (string.IsNullOrWhiteSpace(orijinalBaslik)) continue;
+
+                    bool haberMevcut = await _context.Haberler.AnyAsync(h => h.Baslik == orijinalBaslik);
+
+                    if (!haberMevcut)
+                    {
+                        Console.WriteLine("--> SONUÇ: YENİ HABER. LLM işlemi başlatılıyor.");
+                        var orijinalIcerik = item.Summary?.Text ?? (item.Content as TextSyndicationContent)?.Text ?? "";
+
+                        // Bu kod, içerik metnindeki <img ... > gibi tüm etiketleri bulur
+                        // ve onları boşlukla değiştirerek metinden tamamen temizler.
+                        orijinalIcerik = Regex.Replace(orijinalIcerik, "<img[^>]*>", string.Empty, RegexOptions.IgnoreCase);
+
+                        var (yeniBaslik, yeniIcerik) = await _llmService.HaberiYenidenYaz(orijinalBaslik, orijinalIcerik);
+
+                        var yeniHaber = new Haber
+                        {
+                            Baslik = yeniBaslik ?? orijinalBaslik,
+                            Icerik = yeniIcerik,
+                            YayinTarihi = item.PublishDate.DateTime,
+                            ResimUrl = item.Links.FirstOrDefault(l => l.MediaType?.StartsWith("image/") ?? false)?.Uri.ToString(),
+                            Onaylandi = true
+                        };
+                        yeniEklenenHaberler.Add(yeniHaber);
+
+                        // DEĞİŞİKLİK: Sadece bir haber başarıyla işlendiğinde sayacı artır.
+                        islenenHaberSayisi++;
+                    }
+                }
+
+                if (yeniEklenenHaberler.Any())
+                {
+                    await _context.Haberler.AddRangeAsync(yeniEklenenHaberler);
+                    await _context.SaveChangesAsync();
                 }
             }
-
-            // === DEBUG ADIM 5: Kaç haberin veritabanına kaydedileceğini görelim ===
-            Console.WriteLine($"{yeniEklenenHaberler.Count} adet haber veritabanına kaydedilmek üzere hazır.");
-
-            if (yeniEklenenHaberler.Any())
+            catch (Exception ex)
             {
-                await _context.Haberler.AddRangeAsync(yeniEklenenHaberler);
-                await _context.SaveChangesAsync();
-                Console.WriteLine("Başarılı: Yeni haberler veritabanına kaydedildi.");
+                Console.WriteLine($"!!! RSS OKUMA HATASI: {ex.Message}");
+                yeniEklenenHaberler.Clear();
             }
 
             return yeniEklenenHaberler;
-        }
-        catch (Exception ex)
-        {
-            // === DEBUG ADIM 6: Bir hata olursa detayını görelim ===
-            Console.WriteLine($"!!! RSS OKUMA HATASI: {ex.Message}");
-            Console.WriteLine(ex.StackTrace); // Hatanın tam kaynağını görmek için
-            return new List<Haber>();
         }
     }
 }

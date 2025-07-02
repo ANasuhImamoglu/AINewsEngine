@@ -1515,6 +1515,22 @@
           }
         }
       },
+      "System.ServiceModel.Syndication/9.0.6": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/System.ServiceModel.Syndication.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/System.ServiceModel.Syndication.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
       "System.Text.Encodings.Web/9.0.6": {
         "type": "package",
         "compile": {
@@ -4639,6 +4655,34 @@
         "version.txt"
       ]
     },
+    "System.ServiceModel.Syndication/9.0.6": {
+      "sha512": "x1fabx4YAzfUFMTUZvNYk2I61yw3+9Mfl+Qkue9HAnMnrlV84srcuzTAcagr3a+OaAWGQLUNv1OIFF/L8ZLw+g==",
+      "type": "package",
+      "path": "system.servicemodel.syndication/9.0.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.ServiceModel.Syndication.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/System.ServiceModel.Syndication.targets",
+        "lib/net462/System.ServiceModel.Syndication.dll",
+        "lib/net462/System.ServiceModel.Syndication.xml",
+        "lib/net8.0/System.ServiceModel.Syndication.dll",
+        "lib/net8.0/System.ServiceModel.Syndication.xml",
+        "lib/net9.0/System.ServiceModel.Syndication.dll",
+        "lib/net9.0/System.ServiceModel.Syndication.xml",
+        "lib/netstandard2.0/System.ServiceModel.Syndication.dll",
+        "lib/netstandard2.0/System.ServiceModel.Syndication.xml",
+        "system.servicemodel.syndication.9.0.6.nupkg.sha512",
+        "system.servicemodel.syndication.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "System.Text.Encodings.Web/9.0.6": {
       "sha512": "uWRgViw2yJAUyGxrzDLCc6fkzE2dZIoXxs8V6YjCujKsJuP0pnpYSlbm2/7tKd0SjBnMtwfDQhLenk3bXonVOA==",
       "type": "package",
@@ -4799,7 +4843,8 @@
       "Microsoft.EntityFrameworkCore.Sqlite >= 9.0.6",
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.6",
       "Swashbuckle.AspNetCore >= 6.4.0",
-      "System.Data.SQLite >= 1.0.119"
+      "System.Data.SQLite >= 1.0.119",
+      "System.ServiceModel.Syndication >= 9.0.6"
     ]
   },
   "packageFolders": {
@@ -4873,6 +4918,10 @@
           "System.Data.SQLite": {
             "target": "Package",
             "version": "[1.0.119, )"
+          },
+          "System.ServiceModel.Syndication": {
+            "target": "Package",
+            "version": "[9.0.6, )"
           }
         },
         "imports": [

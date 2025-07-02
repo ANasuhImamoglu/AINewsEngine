@@ -107,5 +107,21 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AINewsEngine.Controllers.RssController",
+    "Method": "CekVeKaydet",
+    "RelativePath": "api/Rss/CekVeKaydet",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "AINewsEngine.Controllers.RssRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

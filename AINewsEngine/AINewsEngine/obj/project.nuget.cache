@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "5Pwjc4A2AoY=",
+  "dgSpecHash": "nCwTjqEL5oM=",
   "success": true,
   "projectFilePath": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\AINewsEngine.csproj",
   "expectedPackageFiles": [
@@ -78,6 +78,7 @@
     "C:\\Users\\taha\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.7.0\\system.security.cryptography.protecteddata.4.7.0.nupkg.sha512",
     "C:\\Users\\taha\\.nuget\\packages\\system.security.permissions\\4.7.0\\system.security.permissions.4.7.0.nupkg.sha512",
     "C:\\Users\\taha\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
+    "C:\\Users\\taha\\.nuget\\packages\\system.servicemodel.syndication\\9.0.6\\system.servicemodel.syndication.9.0.6.nupkg.sha512",
     "C:\\Users\\taha\\.nuget\\packages\\system.text.encodings.web\\9.0.6\\system.text.encodings.web.9.0.6.nupkg.sha512",
     "C:\\Users\\taha\\.nuget\\packages\\system.text.json\\9.0.6\\system.text.json.9.0.6.nupkg.sha512",
     "C:\\Users\\taha\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512",

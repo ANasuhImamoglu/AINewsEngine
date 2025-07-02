@@ -71,6 +71,10 @@
             "System.Data.SQLite": {
               "target": "Package",
               "version": "[1.0.119, )"
+            },
+            "System.ServiceModel.Syndication": {
+              "target": "Package",
+              "version": "[9.0.6, )"
             }
           },
           "imports": [
