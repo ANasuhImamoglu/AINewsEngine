@@ -34,11 +34,24 @@ builder.Services.AddScoped<IRssService, RssService>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
+// CORS eklendi
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAngular", builder =>
+    {
+        builder.WithOrigins("http://localhost:4200")
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
+
+
 // 3. UYGULAMAYI DERLEME
 var app = builder.Build();
 
 // 4. HTTP �STEK P�PELINE'INI YAPILANDIRMA (Middleware)
-
+ 
 // Sadece geli�tirme ortam�ndayken Swagger'� ve Swagger UI'� etkinle�tiriyoruz.
 if (app.Environment.IsDevelopment())
 {
@@ -48,6 +61,8 @@ if (app.Environment.IsDevelopment())
 
 // Gelen HTTP isteklerini otomatik olarak HTTPS'e y�nlendirir.
 app.UseHttpsRedirection();
+
+app.UseCors("AllowAngular"); // CORS kullanımı
 
 // Yetkilendirme (Authorization) ara katman�n� etkinle�tirir.
 app.UseAuthorization();

@@ -30,7 +30,8 @@ public class HaberlerController : ControllerBase
     public async Task<ActionResult<Haber>> GetHaber(int id)
     {
         var haber = await _context.Haberler.FindAsync(id);
-
+        
+        //burada flutter a gönder
         if (haber == null)
         {
             return NotFound(); // 404 Not Found
