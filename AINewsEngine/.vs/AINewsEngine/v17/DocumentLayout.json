@@ -3,8 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\ahmet\\OneDrive\\Belgeler\\AINewsEngineProject\\AINewsEngine\\AINewsEngine\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\ahmet\\onedrive\\belgeler\\ainewsengineproject\\ainewsengine\\ainewsengine\\ainewsengine\\migrations\\20250706213213_updateonaylandidefault.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\migrations\\20250706213213_updateonaylandidefault.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\ahmet\\onedrive\\belgeler\\ainewsengineproject\\ainewsengine\\ainewsengine\\ainewsengine\\models\\haber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\models\\haber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\ahmet\\onedrive\\belgeler\\ainewsengineproject\\ainewsengine\\ainewsengine\\ainewsengine\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\ahmet\\onedrive\\belgeler\\ainewsengineproject\\ainewsengine\\ainewsengine\\ainewsengine\\data\\veritabanicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\data\\veritabanicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\ahmet\\onedrive\\belgeler\\ainewsengineproject\\ainewsengine\\ainewsengine\\ainewsengine\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\ahmet\\onedrive\\belgeler\\ainewsengineproject\\ainewsengine\\ainewsengine\\ainewsengine\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\ahmet\\onedrive\\belgeler\\ainewsengineproject\\ainewsengine\\ainewsengine\\ainewsengine\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\ahmet\\onedrive\\belgeler\\ainewsengineproject\\ainewsengine\\ainewsengine\\ainewsengine\\service\\irssservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\service\\irssservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\ahmet\\onedrive\\belgeler\\ainewsengineproject\\ainewsengine\\ainewsengine\\ainewsengine\\service\\rssservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\service\\rssservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\ahmet\\onedrive\\belgeler\\ainewsengineproject\\ainewsengine\\ainewsengine\\ainewsengine\\controllers\\rsscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\controllers\\rsscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\ahmet\\onedrive\\belgeler\\ainewsengineproject\\ainewsengine\\ainewsengine\\ainewsengine\\service\\llmservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\service\\llmservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\ahmet\\onedrive\\belgeler\\ainewsengineproject\\ainewsengine\\ainewsengine\\ainewsengine\\service\\illmservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\service\\illmservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,15 +71,151 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "20250706213213_UpdateOnaylandiDefault.cs",
+              "DocumentMoniker": "C:\\Users\\ahmet\\OneDrive\\Belgeler\\AINewsEngineProject\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Migrations\\20250706213213_UpdateOnaylandiDefault.cs",
+              "RelativeDocumentMoniker": "AINewsEngine\\Migrations\\20250706213213_UpdateOnaylandiDefault.cs",
+              "ToolTip": "C:\\Users\\ahmet\\OneDrive\\Belgeler\\AINewsEngineProject\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Migrations\\20250706213213_UpdateOnaylandiDefault.cs",
+              "RelativeToolTip": "AINewsEngine\\Migrations\\20250706213213_UpdateOnaylandiDefault.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T21:36:06.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "WeatherForecastController.cs",
               "DocumentMoniker": "C:\\Users\\ahmet\\OneDrive\\Belgeler\\AINewsEngineProject\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "AINewsEngine\\Controllers\\WeatherForecastController.cs",
               "ToolTip": "C:\\Users\\ahmet\\OneDrive\\Belgeler\\AINewsEngineProject\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Controllers\\WeatherForecastController.cs",
               "RelativeToolTip": "AINewsEngine\\Controllers\\WeatherForecastController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwCEAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAABQAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T11:32:45.445Z",
+              "WhenOpened": "2025-07-06T21:08:24.672Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\ahmet\\OneDrive\\Belgeler\\AINewsEngineProject\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "AINewsEngine\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\ahmet\\OneDrive\\Belgeler\\AINewsEngineProject\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Properties\\launchSettings.json",
+              "RelativeToolTip": "AINewsEngine\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAwwBoAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-02T10:21:49.76Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ahmet\\OneDrive\\Belgeler\\AINewsEngineProject\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Program.cs",
+              "RelativeDocumentMoniker": "AINewsEngine\\Program.cs",
+              "ToolTip": "C:\\Users\\ahmet\\OneDrive\\Belgeler\\AINewsEngineProject\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Program.cs",
+              "RelativeToolTip": "AINewsEngine\\Program.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T13:48:51.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "VeritabaniContext.cs",
+              "DocumentMoniker": "C:\\Users\\ahmet\\OneDrive\\Belgeler\\AINewsEngineProject\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Data\\VeritabaniContext.cs",
+              "RelativeDocumentMoniker": "AINewsEngine\\Data\\VeritabaniContext.cs",
+              "ToolTip": "C:\\Users\\ahmet\\OneDrive\\Belgeler\\AINewsEngineProject\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Data\\VeritabaniContext.cs",
+              "RelativeToolTip": "AINewsEngine\\Data\\VeritabaniContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T06:46:54.113Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Haber.cs",
+              "DocumentMoniker": "C:\\Users\\ahmet\\OneDrive\\Belgeler\\AINewsEngineProject\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Models\\Haber.cs",
+              "RelativeDocumentMoniker": "AINewsEngine\\Models\\Haber.cs",
+              "ToolTip": "C:\\Users\\ahmet\\OneDrive\\Belgeler\\AINewsEngineProject\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Models\\Haber.cs",
+              "RelativeToolTip": "AINewsEngine\\Models\\Haber.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBgAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T06:45:42.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RssController.cs",
+              "DocumentMoniker": "C:\\Users\\ahmet\\OneDrive\\Belgeler\\AINewsEngineProject\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Controllers\\RssController.cs",
+              "RelativeDocumentMoniker": "AINewsEngine\\Controllers\\RssController.cs",
+              "ToolTip": "C:\\Users\\ahmet\\OneDrive\\Belgeler\\AINewsEngineProject\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Controllers\\RssController.cs",
+              "RelativeToolTip": "AINewsEngine\\Controllers\\RssController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAIwBYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T13:55:03.768Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ahmet\\OneDrive\\Belgeler\\AINewsEngineProject\\AINewsEngine\\AINewsEngine\\AINewsEngine\\appsettings.json",
+              "RelativeDocumentMoniker": "AINewsEngine\\appsettings.json",
+              "ToolTip": "C:\\Users\\ahmet\\OneDrive\\Belgeler\\AINewsEngineProject\\AINewsEngine\\AINewsEngine\\AINewsEngine\\appsettings.json",
+              "RelativeToolTip": "AINewsEngine\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-01T13:51:24.668Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ILlmService.cs",
+              "DocumentMoniker": "C:\\Users\\ahmet\\OneDrive\\Belgeler\\AINewsEngineProject\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Service\\ILlmService.cs",
+              "RelativeDocumentMoniker": "AINewsEngine\\Service\\ILlmService.cs",
+              "ToolTip": "C:\\Users\\ahmet\\OneDrive\\Belgeler\\AINewsEngineProject\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Service\\ILlmService.cs",
+              "RelativeToolTip": "AINewsEngine\\Service\\ILlmService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T13:48:38.487Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LlmService.cs",
+              "DocumentMoniker": "C:\\Users\\ahmet\\OneDrive\\Belgeler\\AINewsEngineProject\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Service\\LlmService.cs",
+              "RelativeDocumentMoniker": "AINewsEngine\\Service\\LlmService.cs",
+              "ToolTip": "C:\\Users\\ahmet\\OneDrive\\Belgeler\\AINewsEngineProject\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Service\\LlmService.cs",
+              "RelativeToolTip": "AINewsEngine\\Service\\LlmService.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAIwAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T13:47:53.359Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IRssService.cs",
+              "DocumentMoniker": "C:\\Users\\ahmet\\OneDrive\\Belgeler\\AINewsEngineProject\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Service\\IRssService.cs",
+              "RelativeDocumentMoniker": "AINewsEngine\\Service\\IRssService.cs",
+              "ToolTip": "C:\\Users\\ahmet\\OneDrive\\Belgeler\\AINewsEngineProject\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Service\\IRssService.cs",
+              "RelativeToolTip": "AINewsEngine\\Service\\IRssService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T13:47:16.192Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RssService.cs",
+              "DocumentMoniker": "C:\\Users\\ahmet\\OneDrive\\Belgeler\\AINewsEngineProject\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Service\\RssService.cs",
+              "RelativeDocumentMoniker": "AINewsEngine\\Service\\RssService.cs",
+              "ToolTip": "C:\\Users\\ahmet\\OneDrive\\Belgeler\\AINewsEngineProject\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Service\\RssService.cs",
+              "RelativeToolTip": "AINewsEngine\\Service\\RssService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T10:37:25.076Z"
             }
           ]
         }

@@ -16,6 +16,29 @@ public class HaberlerController : ControllerBase
         _context = context;
     }
 
+    //Flutter için api kýsmý 
+
+    // Mevcut endpoint'ler (örneðin, GET /api/Haberler, POST /api/Haberler/fetch-rss)
+    [HttpPut("{id}/approve")]
+    public async Task<IActionResult> ApproveNews(int id)
+    {
+        var haber = await _context.Haberler.FindAsync(id);
+        if (haber == null)
+        {
+            return NotFound();
+        }
+
+        haber.Onaylandi = true;
+        await _context.SaveChangesAsync();
+
+        return Ok(haber);
+    }
+
+
+
+
+
+
     // GET: api/Haberler
     // Tüm haberleri getirir.
     [HttpGet]

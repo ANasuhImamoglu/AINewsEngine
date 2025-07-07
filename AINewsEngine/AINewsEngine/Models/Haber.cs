@@ -22,7 +22,7 @@ public class Haber
     public DateTime YayinTarihi { get; set; }
 
     // Onaylandi BOOLEAN DEFAULT FALSE
-    public bool Onaylandi { get; set; }
+    public bool Onaylandi { get; set; } = false;
 
     // Veritabanına yeni bir kayıt eklenirken varsayılan değerleri atamak için constructor.
     public Haber()

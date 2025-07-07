@@ -109,6 +109,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "HaberlerController",
+    "Method": "ApproveNews",
+    "RelativePath": "api/Haberler/{id}/approve",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "AINewsEngine.Controllers.RssController",
     "Method": "CekVeKaydet",
     "RelativePath": "api/Rss/CekVeKaydet",
