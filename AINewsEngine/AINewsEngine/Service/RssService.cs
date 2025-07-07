@@ -1,11 +1,12 @@
-﻿using System.ServiceModel.Syndication;
+﻿using AINewsEngine.Data;
+using AINewsEngine.Models;
+using AINewsEngine.Service;
+using Microsoft.EntityFrameworkCore;
+using System.ServiceModel.Syndication;
 using System.Text.RegularExpressions;
 using System.Xml;
-using Microsoft.EntityFrameworkCore;
-using AINewsEngine.Models;
-using AINewsEngine.Data;
 
-namespace AINewsEngine.Service
+namespace AINewsEngine.Services
 {
     public class RssService : IRssService
     {
@@ -20,13 +21,12 @@ namespace AINewsEngine.Service
             _llmService = llmService;
         }
 
-        public async Task<List<Haber>> CekVeKaydetAsync(string rssUrl)
+        // DEĞİŞİKLİK: Metod imzası, int kategoriId parametresini alacak şekilde güncellendi.
+        public async Task<List<Haber>> CekVeKaydetAsync(string rssUrl, int kategoriId)
         {
             var yeniEklenenHaberler = new List<Haber>();
-
-            // YENİ: Yapay zeka tarafından işlenen haber sayısını tutmak için bir sayaç
             int islenenHaberSayisi = 0;
-            const int haberLimiti = 5; // Limiti buradan kolayca değiştirebilirsiniz
+            const int haberLimiti = 5;
 
             try
             {
@@ -37,11 +37,10 @@ namespace AINewsEngine.Service
 
                 foreach (var item in feed.Items)
                 {
-                    // DEĞİŞİKLİK: Eğer 5 yeni haber işlediysek, döngüyü tamamen durdur.
                     if (islenenHaberSayisi >= haberLimiti)
                     {
                         Console.WriteLine($"--> SINIR: {haberLimiti} yeni haber işlendi, işlem durduruluyor.");
-                        break; // foreach döngüsünden çık
+                        break;
                     }
 
                     var orijinalBaslik = item.Title?.Text;
@@ -54,8 +53,6 @@ namespace AINewsEngine.Service
                         Console.WriteLine("--> SONUÇ: YENİ HABER. LLM işlemi başlatılıyor.");
                         var orijinalIcerik = item.Summary?.Text ?? (item.Content as TextSyndicationContent)?.Text ?? "";
 
-                        // Bu kod, içerik metnindeki <img ... > gibi tüm etiketleri bulur
-                        // ve onları boşlukla değiştirerek metinden tamamen temizler.
                         orijinalIcerik = Regex.Replace(orijinalIcerik, "<img[^>]*>", string.Empty, RegexOptions.IgnoreCase);
 
                         var (yeniBaslik, yeniIcerik) = await _llmService.HaberiYenidenYaz(orijinalBaslik, orijinalIcerik);
@@ -65,12 +62,13 @@ namespace AINewsEngine.Service
                             Baslik = yeniBaslik ?? orijinalBaslik,
                             Icerik = yeniIcerik,
                             YayinTarihi = item.PublishDate.DateTime,
-                            ResimUrl = item.Links.FirstOrDefault(l => l.MediaType?.StartsWith("image/") ?? false)?.Uri.ToString(),
-                            Onaylandi = true
+                            ResimUrl = null, // Resim URL'si alınmıyor
+                            Onaylandi = true,
+                            // DEĞİŞİKLİK: Gelen kategori ID'sini yeni habere atıyoruz.
+                            KategoriId = kategoriId
                         };
                         yeniEklenenHaberler.Add(yeniHaber);
 
-                        // DEĞİŞİKLİK: Sadece bir haber başarıyla işlendiğinde sayacı artır.
                         islenenHaberSayisi++;
                     }
                 }
