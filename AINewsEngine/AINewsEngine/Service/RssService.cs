@@ -63,7 +63,7 @@ namespace AINewsEngine.Services
                             Icerik = yeniIcerik,
                             YayinTarihi = item.PublishDate.DateTime,
                             ResimUrl = null, // Resim URL'si alınmıyor
-                            Onaylandi = true,
+                            Onaylandi = false,
                             // DEĞİŞİKLİK: Gelen kategori ID'sini yeni habere atıyoruz.
                             KategoriId = kategoriId
                         };

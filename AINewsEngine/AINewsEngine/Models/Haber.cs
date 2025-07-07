@@ -18,19 +18,20 @@ namespace AINewsEngine.Models
         // Eski string Kategori alanı kaldırıldı.
 
     // Icerik TEXT
-    public string? Icerik { get; set; } // Null olabilir
+  //  public string? Icerik { get; set; } // Null olabilir
 
     // ResimUrl TEXT
-    public string? ResimUrl { get; set; } // Null olabilir
+    //public string? ResimUrl { get; set; } // Null olabilir
 
     // YayinTarihi DATETIME
-    public DateTime YayinTarihi { get; set; }
+    //public DateTime YayinTarihi { get; set; }
 
     // Onaylandi BOOLEAN DEFAULT FALSE
-    public bool Onaylandi { get; set; } = false;
+    // public bool Onaylandi { get; set; } = false;
 
         // YENİ: Entity Framework'ün ilişkiyi anlaması için Navigation Property
         [ForeignKey("KategoriId")]
         public Kategori? Kategori { get; set; }
+        public int KategoriId { get; set; }
     }
 }
