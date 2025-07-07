@@ -109,53 +109,23 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "KategorilerController",
-    "Method": "GetKategoriler",
-    "RelativePath": "api/Kategoriler",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[AINewsEngine.Models.Kategori, AINewsEngine, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "KategorilerController",
-    "Method": "PostKategori",
-    "RelativePath": "api/Kategoriler",
-    "HttpMethod": "POST",
+    "ContainingType": "HaberlerController",
+    "Method": "ApproveNews",
+    "RelativePath": "api/Haberler/{id}/approve",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "kategori",
-        "Type": "AINewsEngine.Models.Kategori",
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "AINewsEngine.Models.Kategori",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "RssController",
+    "ContainingType": "AINewsEngine.Controllers.RssController",
     "Method": "CekVeKaydet",
     "RelativePath": "api/Rss/CekVeKaydet",
     "HttpMethod": "POST",
@@ -164,7 +134,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "RssRequest",
+        "Type": "AINewsEngine.Controllers.RssRequest",
         "IsRequired": true
       }
     ],

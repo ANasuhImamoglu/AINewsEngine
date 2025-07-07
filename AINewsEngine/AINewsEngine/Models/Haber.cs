@@ -17,8 +17,17 @@ namespace AINewsEngine.Models
         // --- DEĞİŞİKLİKLER BURADA ---
         // Eski string Kategori alanı kaldırıldı.
 
-        // YENİ: Kategori tablosuna referans için Foreign Key
-        public int KategoriId { get; set; }
+    // Icerik TEXT
+    public string? Icerik { get; set; } // Null olabilir
+
+    // ResimUrl TEXT
+    public string? ResimUrl { get; set; } // Null olabilir
+
+    // YayinTarihi DATETIME
+    public DateTime YayinTarihi { get; set; }
+
+    // Onaylandi BOOLEAN DEFAULT FALSE
+    public bool Onaylandi { get; set; } = false;
 
         // YENİ: Entity Framework'ün ilişkiyi anlaması için Navigation Property
         [ForeignKey("KategoriId")]
