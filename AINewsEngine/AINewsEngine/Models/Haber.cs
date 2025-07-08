@@ -32,6 +32,9 @@ namespace AINewsEngine.Models
         // YENİ: Entity Framework'ün ilişkiyi anlaması için Navigation Property
         [ForeignKey("KategoriId")]
         public Kategori? Kategori { get; set; }
+
+        public int TiklanmaSayisi { get; set; }
+        public int OkunmaSayisi { get; set; }
         public int KategoriId { get; set; }
     }
 }

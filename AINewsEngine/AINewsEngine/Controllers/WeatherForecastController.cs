@@ -123,6 +123,38 @@ public class HaberlerController : ControllerBase
         return NoContent(); // 204 No Content
     }
 
+    // === YENÝ ENDPOINT 1: Týklanma Sayacýný Artýrma ===
+    [HttpPost("{id}/tiklandi")]
+    public async Task<IActionResult> TiklanmaArtir(int id)
+    {
+        var haber = await _context.Haberler.FindAsync(id);
+        if (haber == null)
+        {
+            return NotFound();
+        }
+
+        haber.TiklanmaSayisi++;
+        await _context.SaveChangesAsync();
+
+        return Ok(); // Baþarýlý yanýtý döner
+    }
+
+    // === YENÝ ENDPOINT 2: Okunma Sayacýný Artýrma ===
+    [HttpPost("{id}/okundu")]
+    public async Task<IActionResult> OkunmaArtir(int id)
+    {
+        var haber = await _context.Haberler.FindAsync(id);
+        if (haber == null)
+        {
+            return NotFound();
+        }
+
+        haber.OkunmaSayisi++;
+        await _context.SaveChangesAsync();
+
+        return Ok(); // Baþarýlý yanýtý döner
+    }
+
     private bool HaberExists(int id)
     {
         return _context.Haberler.Any(e => e.Id == id);
