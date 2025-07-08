@@ -5,6 +5,29 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/Haberler/{id}/approve": {
+      "put": {
+        "tags": [
+          "Haberler"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/Haberler": {
       "get": {
         "tags": [
@@ -383,10 +406,6 @@
           "onaylandi": {
             "type": "boolean"
           },
-          "kategoriId": {
-            "type": "integer",
-            "format": "int32"
-          },
           "kategori": {
             "$ref": "#/components/schemas/Kategori"
           },
@@ -395,6 +414,10 @@
             "format": "int32"
           },
           "okunmaSayisi": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "kategoriId": {
             "type": "integer",
             "format": "int32"
           }

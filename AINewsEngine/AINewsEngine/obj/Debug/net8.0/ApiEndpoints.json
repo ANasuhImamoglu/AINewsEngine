@@ -110,6 +110,22 @@
   },
   {
     "ContainingType": "HaberlerController",
+    "Method": "ApproveNews",
+    "RelativePath": "api/Haberler/{id}/approve",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HaberlerController",
     "Method": "OkunmaArtir",
     "RelativePath": "api/Haberler/{id}/okundu",
     "HttpMethod": "POST",
