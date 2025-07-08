@@ -1,84 +1,94 @@
 ﻿using AINewsEngine.Data;
+using AINewsEngine.Models;
 using AINewsEngine.Service;
 using AINewsEngine.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// --- YENİ: CORS Politikası Adı ---
+// --- CORS Politikası ---
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
-
-// Servisleri Konteynere Ekle
-
-// --- YENİ: CORS Servisini Ekliyoruz ---
-// Bu kod, geliştirme ortamında herhangi bir yerden gelen isteklere izin verir.
-// Bu, Postman ve Swagger gibi araçların sorunsuz çalışmasını sağlar.
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy(name: MyAllowSpecificOrigins,
-                      policy =>
-                      {
-                          policy.AllowAnyOrigin()
-                                .AllowAnyHeader()
-                                .AllowAnyMethod();
-                      });
+    options.AddPolicy(name: MyAllowSpecificOrigins, policy =>
+    {
+        policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+    });
 });
 
+// --- Veritabanı ve Diğer Servisler ---
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<VeritabaniContext>(options =>
     options.UseSqlite(connectionString));
 
 builder.Services.AddHttpClient("RssClient", client => { client.Timeout = TimeSpan.FromSeconds(30); });
 
-// LlmService artık OpenRouter'a göre çalıştığı için sistem sorunsuz çalışacaktır.
 builder.Services.AddScoped<ILlmService, LlmService>();
-
-// Kendi olu�turdu�umuz RSS servisini projemize tan�t�yoruz.
-// Birisi IRssService istedi�inde, ona RssService'in bir �rne�ini ver.
 builder.Services.AddScoped<IRssService, RssService>();
+
+// --- IDENTITY ve AUTHENTICATION YAPILANDIRMASI ---
+
+// 1. Identity Servisini Ekleme
+// Kullanici ve IdentityRole sınıflarını kullanarak Identity sistemini kuruyoruz.
+// Şifre kuralları gibi ayarları burada daha esnek hale getirebiliriz.
+builder.Services.AddIdentity<Kullanici, IdentityRole>(options =>
+{
+    options.Password.RequireDigit = true;
+    options.Password.RequireLowercase = true;
+    options.Password.RequireUppercase = true;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequiredLength = 6;
+})
+.AddEntityFrameworkStores<VeritabaniContext>()
+.AddDefaultTokenProviders();
+
+// 2. JWT Authentication'ı Ekleme
+// API'mize gelen isteklerdeki "Bearer" token'larını nasıl doğrulayacağını öğretiyoruz.
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(options =>
+{
+    options.SaveToken = true;
+    options.RequireHttpsMetadata = false;
+    options.TokenValidationParameters = new TokenValidationParameters()
+    {
+        ValidateIssuer = false, // Yayıncıyı doğrulama (şimdilik kapalı)
+        ValidateAudience = false, // Dinleyiciyi doğrulama (şimdilik kapalı)
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!))
+    };
+});
+
+// ----------------------------------------------------
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-
-// CORS eklendi
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowAngular", builder =>
-    {
-        builder.WithOrigins("http://localhost:4200")
-              .AllowAnyMethod()
-              .AllowAnyHeader();
-    });
-});
-
-
-// 3. UYGULAMAYI DERLEME
 var app = builder.Build();
 
-// 4. HTTP �STEK P�PELINE'INI YAPILANDIRMA (Middleware)
- 
-// Sadece geli�tirme ortam�ndayken Swagger'� ve Swagger UI'� etkinle�tiriyoruz.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-//app.UseHttpsRedirection();
+// app.UseHttpsRedirection(); // HTTPS yönlendirmesi kapalı kalmalı
 
-// --- YENİ: CORS Politikasını Uyguluyoruz ---
-// Bu satır, UseRouting ve UseAuthorization arasında olmalıdır.
 app.UseCors(MyAllowSpecificOrigins);
 
-app.UseCors("AllowAngular"); // CORS kullanımı
-
-// Yetkilendirme (Authorization) ara katman�n� etkinle�tirir.
+// YENİ: Authentication middleware'ini ekliyoruz.
+// Bu, UseAuthorization'dan ÖNCE gelmelidir.
+app.UseAuthentication();
 app.UseAuthorization();
 
-// Gelen istekleri do�ru controller'daki do�ru action'a y�nlendirmek i�in rotalar� e�ler.
 app.MapControllers();
 
-// 5. UYGULAMAYI �ALI�TIRMA
 app.Run();

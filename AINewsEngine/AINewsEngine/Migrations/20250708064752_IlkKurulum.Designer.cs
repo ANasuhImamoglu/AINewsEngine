@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AINewsEngine.Migrations
 {
     [DbContext(typeof(VeritabaniContext))]
-    [Migration("20250702071410_YeniKurulum")]
-    partial class YeniKurulum
+    [Migration("20250708064752_IlkKurulum")]
+    partial class IlkKurulum
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -36,11 +36,17 @@ namespace AINewsEngine.Migrations
                     b.Property<int>("KategoriId")
                         .HasColumnType("INTEGER");
 
+                    b.Property<int>("OkunmaSayisi")
+                        .HasColumnType("INTEGER");
+
                     b.Property<bool>("Onaylandi")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("ResimUrl")
                         .HasColumnType("TEXT");
+
+                    b.Property<int>("TiklanmaSayisi")
+                        .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("YayinTarihi")
                         .HasColumnType("TEXT");
