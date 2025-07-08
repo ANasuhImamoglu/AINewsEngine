@@ -190,6 +190,52 @@
         }
       }
     },
+    "/api/Haberler/{id}/tiklandi": {
+      "post": {
+        "tags": [
+          "Haberler"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Haberler/{id}/okundu": {
+      "post": {
+        "tags": [
+          "Haberler"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/Kategoriler": {
       "get": {
         "tags": [
@@ -343,6 +389,14 @@
           },
           "kategori": {
             "$ref": "#/components/schemas/Kategori"
+          },
+          "tiklanmaSayisi": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "okunmaSayisi": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
