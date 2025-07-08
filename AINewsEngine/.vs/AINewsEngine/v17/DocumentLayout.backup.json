@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\taha\\desktop\\ainewsengine\\ainewsengine\\ainewsengine\\service\\rssservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\service\\rssservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\taha\\desktop\\ainewsengine\\ainewsengine\\ainewsengine\\models\\haber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\models\\haber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\taha\\desktop\\ainewsengine\\ainewsengine\\ainewsengine\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\taha\\desktop\\ainewsengine\\ainewsengine\\ainewsengine\\service\\rssservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\service\\rssservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,7 +38,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "WeatherForecastController.cs",
               "DocumentMoniker": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "AINewsEngine\\Controllers\\WeatherForecastController.cs",
@@ -51,7 +51,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\appsettings.json",
               "RelativeDocumentMoniker": "AINewsEngine\\appsettings.json",
@@ -64,7 +64,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Kategori.cs",
               "DocumentMoniker": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Models\\Kategori.cs",
               "RelativeDocumentMoniker": "AINewsEngine\\Models\\Kategori.cs",
@@ -77,19 +77,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "RssService.cs",
               "DocumentMoniker": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Service\\RssService.cs",
               "RelativeDocumentMoniker": "AINewsEngine\\Service\\RssService.cs",
               "ToolTip": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Service\\RssService.cs",
               "RelativeToolTip": "AINewsEngine\\Service\\RssService.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAiwD8AAABEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T07:19:28.746Z"
+              "WhenOpened": "2025-07-07T07:19:28.746Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Haber.cs",
               "DocumentMoniker": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Models\\Haber.cs",
               "RelativeDocumentMoniker": "AINewsEngine\\Models\\Haber.cs",
