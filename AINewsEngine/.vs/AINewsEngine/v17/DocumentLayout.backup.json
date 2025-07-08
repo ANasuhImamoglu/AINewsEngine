@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\",
+  "WorkspaceRootPath": "C:\\Users\\ahmet\\OneDrive\\Belgeler\\AINewsEngineProject\\AINewsEngine\\AINewsEngine\\",
   "Documents": [
     {
 <<<<<<< Updated upstream
@@ -136,7 +136,7 @@
               "ViewState": "AgIAADEAAAAAAAAAAAAiwD8AAABEAAAAAAAAAA==",
 >>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T13:48:51.813Z",
+              "WhenOpened": "2025-07-07T07:46:01.233Z",
               "EditorCaption": ""
             },
             {
@@ -150,98 +150,20 @@
               "RelativeToolTip": "AINewsEngine\\Data\\VeritabaniContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T06:46:54.113Z",
+              "WhenOpened": "2025-07-07T07:19:28.746Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Haber.cs",
-              "DocumentMoniker": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Models\\Haber.cs",
+              "DocumentMoniker": "C:\\Users\\ahmet\\OneDrive\\Belgeler\\AINewsEngineProject\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Models\\Haber.cs",
               "RelativeDocumentMoniker": "AINewsEngine\\Models\\Haber.cs",
-              "ToolTip": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Models\\Haber.cs",
-              "RelativeToolTip": "AINewsEngine\\Models\\Haber.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAYwAYAAAAFAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\ahmet\\OneDrive\\Belgeler\\AINewsEngineProject\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Models\\Haber.cs*",
+              "RelativeToolTip": "AINewsEngine\\Models\\Haber.cs*",
+              "ViewState": "AgIAABEAAAAAAAAAAAAswA4AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T06:45:42.148Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "RssController.cs",
-              "DocumentMoniker": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Controllers\\RssController.cs",
-              "RelativeDocumentMoniker": "AINewsEngine\\Controllers\\RssController.cs",
-              "ToolTip": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Controllers\\RssController.cs",
-              "RelativeToolTip": "AINewsEngine\\Controllers\\RssController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAIwBYAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T13:55:03.768Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\appsettings.json",
-              "RelativeDocumentMoniker": "AINewsEngine\\appsettings.json",
-              "ToolTip": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\appsettings.json",
-              "RelativeToolTip": "AINewsEngine\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-01T13:51:24.668Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ILlmService.cs",
-              "DocumentMoniker": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Service\\ILlmService.cs",
-              "RelativeDocumentMoniker": "AINewsEngine\\Service\\ILlmService.cs",
-              "ToolTip": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Service\\ILlmService.cs",
-              "RelativeToolTip": "AINewsEngine\\Service\\ILlmService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T13:48:38.487Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "LlmService.cs",
-              "DocumentMoniker": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Service\\LlmService.cs",
-              "RelativeDocumentMoniker": "AINewsEngine\\Service\\LlmService.cs",
-              "ToolTip": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Service\\LlmService.cs",
-              "RelativeToolTip": "AINewsEngine\\Service\\LlmService.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAIwAYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T13:47:53.359Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IRssService.cs",
-              "DocumentMoniker": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Service\\IRssService.cs",
-              "RelativeDocumentMoniker": "AINewsEngine\\Service\\IRssService.cs",
-              "ToolTip": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Service\\IRssService.cs",
-              "RelativeToolTip": "AINewsEngine\\Service\\IRssService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T13:47:16.192Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "RssService.cs",
-              "DocumentMoniker": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Service\\RssService.cs",
-              "RelativeDocumentMoniker": "AINewsEngine\\Service\\RssService.cs",
-              "ToolTip": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Service\\RssService.cs",
-              "RelativeToolTip": "AINewsEngine\\Service\\RssService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T10:37:25.076Z",
+              "WhenOpened": "2025-07-07T07:12:14.411Z",
               "EditorCaption": ""
 =======
               "Title": "Haber.cs",

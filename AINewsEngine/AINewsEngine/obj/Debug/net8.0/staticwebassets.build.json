@@ -1,1 +1,11 @@
-{"Version":1,"Hash":"X0vzBqoq1T5udqQLBG1ag2oU/ZYSBhaWTyqIxvxJjHw=","Source":"AINewsEngine","BasePath":"_content/AINewsEngine","Mode":"Default","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}
+{
+  "Version": 1,
+  "Hash": "tsSF/3+arKPLKPK0YTKA7+v/77KYct0wu+cC/YrFh2s=",
+  "Source": "AINewsEngine",
+  "BasePath": "_content/AINewsEngine",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

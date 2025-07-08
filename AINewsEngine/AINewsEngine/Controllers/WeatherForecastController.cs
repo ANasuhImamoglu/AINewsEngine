@@ -16,6 +16,29 @@ public class HaberlerController : ControllerBase
         _context = context;
     }
 
+    //Flutter için api kýsmý 
+
+    // Mevcut endpoint'ler (örneðin, GET /api/Haberler, POST /api/Haberler/fetch-rss)
+    [HttpPut("{id}/approve")]
+    public async Task<IActionResult> ApproveNews(int id)
+    {
+        var haber = await _context.Haberler.FindAsync(id);
+        if (haber == null)
+        {
+            return NotFound();
+        }
+
+        haber.Onaylandi = true;
+        await _context.SaveChangesAsync();
+
+        return Ok(haber);
+    }
+
+
+
+
+
+
     // GET: api/Haberler
     // Tüm haberleri getirir.
     [HttpGet]
@@ -30,7 +53,8 @@ public class HaberlerController : ControllerBase
     public async Task<ActionResult<Haber>> GetHaber(int id)
     {
         var haber = await _context.Haberler.FindAsync(id);
-
+        
+        //burada flutter a gönder
         if (haber == null)
         {
             return NotFound(); // 404 Not Found

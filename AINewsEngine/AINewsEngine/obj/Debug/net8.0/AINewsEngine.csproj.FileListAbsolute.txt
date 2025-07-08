@@ -216,4 +216,5 @@ C:\Users\taha\Desktop\AINewsEngine\AINewsEngine\AINewsEngine\obj\Debug\net8.0\re
 C:\Users\taha\Desktop\AINewsEngine\AINewsEngine\AINewsEngine\obj\Debug\net8.0\AINewsEngine.pdb
 C:\Users\taha\Desktop\AINewsEngine\AINewsEngine\AINewsEngine\obj\Debug\net8.0\AINewsEngine.genruntimeconfig.cache
 C:\Users\taha\Desktop\AINewsEngine\AINewsEngine\AINewsEngine\obj\Debug\net8.0\ref\AINewsEngine.dll
+C:\Users\taha\Desktop\AINewsEngine\AINewsEngine\AINewsEngine\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\taha\Desktop\AINewsEngine\AINewsEngine\AINewsEngine\bin\Debug\net8.0\System.ServiceModel.Syndication.dll
