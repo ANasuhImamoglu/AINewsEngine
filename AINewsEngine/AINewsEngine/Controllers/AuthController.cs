@@ -31,14 +31,21 @@ namespace AINewsEngine.Controllers
 
             Kullanici user = new()
             {
-                Email = model.Username, // Basitlik adına email ve username aynı
+                Email = model.Username,
                 SecurityStamp = Guid.NewGuid().ToString(),
                 UserName = model.Username
             };
 
             var result = await _userManager.CreateAsync(user, model.Password);
             if (!result.Succeeded)
-                return StatusCode(StatusCodes.Status500InternalServerError, new { Status = "Error", Message = "Kullanıcı oluşturulurken bir hata oluştu! Lütfen şifre karmaşıklığı kurallarını kontrol edin." });
+            {
+                // Hata detaylarını döndürmek daha bilgilendirici olur.
+                var errors = result.Errors.Select(e => e.Description).ToList();
+                return StatusCode(StatusCodes.Status500InternalServerError, new { Status = "Error", Message = "Kullanıcı oluşturulamadı.", Errors = errors });
+            }
+
+            // DEĞİŞİKLİK: Yeni kullanıcıya otomatik olarak "User" rolünü ata.
+            await _userManager.AddToRoleAsync(user, "User");
 
             return Ok(new { Status = "Success", Message = "Kullanıcı başarıyla oluşturuldu!" });
         }
@@ -50,12 +57,21 @@ namespace AINewsEngine.Controllers
             var user = await _userManager.FindByNameAsync(model.Username);
             if (user != null && await _userManager.CheckPasswordAsync(user, model.Password))
             {
+                // DEĞİŞİKLİK: Kullanıcının rollerini alıyoruz.
+                var userRoles = await _userManager.GetRolesAsync(user);
+
                 var authClaims = new List<Claim>
                 {
                     new Claim(ClaimTypes.Name, user.UserName!),
-                    new Claim(ClaimTypes.NameIdentifier, user.Id), // Kullanıcı ID'sini token'a ekliyoruz
+                    new Claim(ClaimTypes.NameIdentifier, user.Id),
                     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 };
+
+                // DEĞİŞİKLİK: Her bir rolü, token'a ayrı bir claim olarak ekliyoruz.
+                foreach (var userRole in userRoles)
+                {
+                    authClaims.Add(new Claim(ClaimTypes.Role, userRole));
+                }
 
                 var authSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]!));
 
@@ -68,7 +84,8 @@ namespace AINewsEngine.Controllers
                 return Ok(new
                 {
                     token = new JwtSecurityTokenHandler().WriteToken(token),
-                    expiration = token.ValidTo
+                    expiration = token.ValidTo,
+                    roles = userRoles // Flutter tarafının kolayca kullanması için rolleri ayrıca da gönderelim.
                 });
             }
             return Unauthorized();
