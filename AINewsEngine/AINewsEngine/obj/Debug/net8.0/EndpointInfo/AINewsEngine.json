@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "AINewsEngine",
-    "version": "1.0"
+    "title": "AI News Engine API",
+    "version": "v1"
   },
   "paths": {
     "/api/Auth/register": {
@@ -321,6 +321,29 @@
         }
       }
     },
+    "/api/Haberler/{id}/onayla": {
+      "post": {
+        "tags": [
+          "Haberler"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/Kategoriler": {
       "get": {
         "tags": [
@@ -563,7 +586,8 @@
           },
           "kategoriId": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -634,6 +658,19 @@
         },
         "additionalProperties": false
       }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "apiKey",
+        "description": "Lütfen 'Bearer' kelimesinin ardından bir boşluk bırakarak JWT token'ınızı girin. \r\n                      Örnek: 'Bearer 12345abcdef'",
+        "name": "Authorization",
+        "in": "header"
+      }
     }
-  }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
 }
