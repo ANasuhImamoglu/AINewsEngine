@@ -1,5 +1,6 @@
 using AINewsEngine.Data;
 using AINewsEngine.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
@@ -153,6 +154,22 @@ public class HaberlerController : ControllerBase
         await _context.SaveChangesAsync();
 
         return Ok(); // Baþarýlý yanýtý döner
+    }
+
+    [Authorize(Roles = "Admin,Moderator")]
+    [HttpPost("{id}/onayla")]
+    public async Task<IActionResult> Onayla(int id)
+    {
+        var haber = await _context.Haberler.FindAsync(id);
+        if (haber == null)
+        {
+            return NotFound();
+        }
+
+        haber.Onaylandi = true;
+        await _context.SaveChangesAsync();
+
+        return Ok(new { message = "Haber baþarýyla onaylandý." });
     }
 
     private bool HaberExists(int id)

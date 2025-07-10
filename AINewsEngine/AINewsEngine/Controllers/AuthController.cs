@@ -85,7 +85,8 @@ namespace AINewsEngine.Controllers
                 {
                     token = new JwtSecurityTokenHandler().WriteToken(token),
                     expiration = token.ValidTo,
-                    roles = userRoles // Flutter tarafının kolayca kullanması için rolleri ayrıca da gönderelim.
+                    roles = userRoles, // Flutter tarafının kolayca kullanması için rolleri ayrıca da gönderelim.
+                    username = user.UserName
                 });
             }
             return Unauthorized();

@@ -35,6 +35,6 @@ namespace AINewsEngine.Models
 
         public int TiklanmaSayisi { get; set; }
         public int OkunmaSayisi { get; set; }
-        public int KategoriId { get; set; }
+        public int? KategoriId { get; set; }
     }
 }
