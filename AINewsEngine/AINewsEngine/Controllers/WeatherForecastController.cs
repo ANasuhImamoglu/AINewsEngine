@@ -1,4 +1,5 @@
 using AINewsEngine.Data;
+using AINewsEngine.DTOs;
 using AINewsEngine.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -42,10 +43,58 @@ public class HaberlerController : ControllerBase
 
     // GET: api/Haberler
     // Tüm haberleri getirir.
+    [ResponseCache(NoStore = true, Location = ResponseCacheLocation.None)]
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<Haber>>> GetHaberler()
+    public async Task<ActionResult<PagedResult<Haber>>> GetHaberler(
+        [FromQuery] int pageNumber = 1,
+        [FromQuery] int pageSize = 10,
+        [FromQuery] int? kategoriId = null) // Opsiyonel kategoriId parametresi
     {
-        return await _context.Haberler.ToListAsync();
+        // Temel sorgu: Sadece onaylanmýþ haberleri al.
+        var query = _context.Haberler
+                            .Where(h => h.Onaylandi == true)
+                            .AsNoTracking();
+                           
+
+        // === DEÐÝÞÝKLÝK BURADA: Kategoriye göre filtreleme ===
+        // Eðer bir kategoriId gönderildiyse ve bu ID 0 deðilse (yani "Tümü" sekmesi deðilse),
+        // sorguyu sadece o kategoriye ait haberleri içerecek þekilde filtrele.
+        if (kategoriId.HasValue && kategoriId.Value != 0)
+        {
+            query = query.Where(h => h.KategoriId == kategoriId.Value);
+        }
+
+        // Sýralamayý filtrelemeden sonra yapýyoruz.
+        query = query.OrderByDescending(h => h.YayinTarihi);
+
+        // 1. Toplam haber sayýsýný alýyoruz.
+        var totalItems = await query.CountAsync();
+
+        // 2. Veritabanýndan sadece ilgili sayfadaki haberleri çekiyoruz.
+        var items = await query
+            .Skip((pageNumber - 1) * pageSize)
+            .Take(pageSize)
+            .ToListAsync();
+
+        // 3. Sayfa bilgilerini hesaplýyoruz.
+        var totalPages = (int)Math.Ceiling(totalItems / (double)pageSize);
+
+        var paginationInfo = new PaginationInfo
+        {
+            TotalItems = totalItems,
+            PageSize = pageSize,
+            PageNumber = pageNumber,
+            TotalPages = totalPages
+        };
+
+        // 4. Sayfalanmýþ sonucu oluþturup döndürüyoruz.
+        var pagedResult = new PagedResult<Haber>
+        {
+            Items = items,
+            Pagination = paginationInfo
+        };
+
+        return Ok(pagedResult);
     }
 
     // GET: api/Haberler/5
@@ -53,12 +102,13 @@ public class HaberlerController : ControllerBase
     [HttpGet("{id}")]
     public async Task<ActionResult<Haber>> GetHaber(int id)
     {
-        var haber = await _context.Haberler.FindAsync(id);
-        
-        //burada flutter a gönder
+        var haber = await _context.Haberler
+                                  .AsNoTracking() // Buraya da eklemek iyi bir pratiktir.
+                                  .FirstOrDefaultAsync(h => h.Id == id);
+
         if (haber == null)
         {
-            return NotFound(); // 404 Not Found
+            return NotFound();
         }
 
         return haber;
