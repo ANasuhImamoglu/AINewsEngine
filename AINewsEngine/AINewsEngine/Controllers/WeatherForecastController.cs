@@ -113,7 +113,7 @@ public class HaberlerController : ControllerBase
         var query = _context.Haberler
                             .Where(h => h.Onaylandi == true)
                             .AsNoTracking();
-
+                           
         // Kategori filtresi varsa uygula
         if (kategoriId.HasValue && kategoriId.Value != 0)
         {
@@ -257,6 +257,7 @@ public class HaberlerController : ControllerBase
         _context.Haberler.Add(haber);
         await _context.SaveChangesAsync();
 
+        // Oluþturulan kaynaðýn konumunu header'da döndürür.
         return CreatedAtAction("GetHaber", new { id = haber.Id }, haber);
     }
 

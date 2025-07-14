@@ -67,33 +67,16 @@
         }
       }
     },
-    "/api/Haberler": {
-      "get": {
+    "/api/Haberler/{id}/approve": {
+      "put": {
         "tags": [
           "Haberler"
         ],
         "parameters": [
           {
-            "name": "page",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 1
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 10
-            }
-          },
-          {
-            "name": "kategoriId",
-            "in": "query",
+            "name": "id",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -105,94 +88,9 @@
             "description": "Success"
           }
         }
-      },
-      "post": {
-        "tags": [
-          "Haberler"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Haber"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Haber"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Haber"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/Haber"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Haber"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Haber"
-                }
-              }
-            }
-          }
-        }
       }
     },
-    "/api/Haberler/search": {
-      "get": {
-        "tags": [
-          "Haberler"
-        ],
-        "parameters": [
-          {
-            "name": "term",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "page",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 1
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 10
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
-    "/api/Haberler/paged": {
+    "/api/Haberler": {
       "get": {
         "tags": [
           "Haberler"
@@ -247,24 +145,30 @@
             }
           }
         }
-      }
-    },
-    "/api/Haberler/{id}/approve": {
-      "put": {
+      },
+      "post": {
         "tags": [
           "Haberler"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Haber"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Haber"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Haber"
+              }
             }
           }
-        ],
+        },
         "responses": {
           "200": {
             "description": "Success",
@@ -285,52 +189,6 @@
                 }
               }
             }
-          }
-        }
-      }
-    },
-    "/api/Haberler/{id}/increment-read": {
-      "put": {
-        "tags": [
-          "Haberler"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
-    "/api/Haberler/{id}/increment-click": {
-      "put": {
-        "tags": [
-          "Haberler"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
           }
         }
       }
@@ -501,82 +359,6 @@
         "responses": {
           "200": {
             "description": "Success"
-          }
-        }
-      }
-    },
-    "/api/Haberler/most-read": {
-      "get": {
-        "tags": [
-          "Haberler"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Haber"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Haber"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Haber"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Haberler/most-clicked": {
-      "get": {
-        "tags": [
-          "Haberler"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Haber"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Haber"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Haber"
-                  }
-                }
-              }
-            }
           }
         }
       }
