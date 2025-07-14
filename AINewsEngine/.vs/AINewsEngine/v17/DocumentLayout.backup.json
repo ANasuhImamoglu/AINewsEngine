@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Asus\\Desktop\\AINewsEngine\\AINewsEngine\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\asus\\desktop\\ainewsengine\\ainewsengine\\ainewsengine\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\asus\\desktop\\ainewsengine\\ainewsengine\\ainewsengine\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\asus\\desktop\\ainewsengine\\ainewsengine\\ainewsengine\\dtos\\pagedresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\dtos\\pagedresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\asus\\desktop\\ainewsengine\\ainewsengine\\ainewsengine\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\asus\\desktop\\ainewsengine\\ainewsengine\\ainewsengine\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\asus\\desktop\\ainewsengine\\ainewsengine\\ainewsengine\\dtos\\pagedresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\dtos\\pagedresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\asus\\desktop\\ainewsengine\\ainewsengine\\ainewsengine\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,24 +66,38 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\appsettings.json",
+              "RelativeDocumentMoniker": "AINewsEngine\\appsettings.json",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\appsettings.json",
+              "RelativeToolTip": "AINewsEngine\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-10T11:42:02.518Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "WeatherForecastController.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "AINewsEngine\\Controllers\\WeatherForecastController.cs",
               "ToolTip": "C:\\Users\\Asus\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Controllers\\WeatherForecastController.cs*",
               "RelativeToolTip": "AINewsEngine\\Controllers\\WeatherForecastController.cs*",
-              "ViewState": "AgIAAEEBAAAAAAAAAAAuwGkBAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAD8BAAAAAAAAAAAkwGkBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-08T06:05:52.245Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "PagedResult.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\DTOs\\PagedResult.cs",
               "RelativeDocumentMoniker": "AINewsEngine\\DTOs\\PagedResult.cs",
@@ -95,27 +109,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "AINewsEngine\\Properties\\launchSettings.json",
               "ToolTip": "C:\\Users\\Asus\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Properties\\launchSettings.json",
               "RelativeToolTip": "AINewsEngine\\Properties\\launchSettings.json",
-              "ViewState": "AgIAABIAAAAAAAAAAAAQwBgAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-10T13:10:12.059Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\appsettings.json",
-              "RelativeDocumentMoniker": "AINewsEngine\\appsettings.json",
-              "ToolTip": "C:\\Users\\Asus\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\appsettings.json*",
-              "RelativeToolTip": "AINewsEngine\\appsettings.json*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-10T11:42:02.518Z",
+              "WhenOpened": "2025-07-10T13:10:12.059Z",
               "EditorCaption": ""
             },
             {
