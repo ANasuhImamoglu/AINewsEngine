@@ -32,7 +32,7 @@ namespace AINewsEngine.Controllers
 
             var haberler = await _context.YerIsaretleri
                 .Where(y => y.KullaniciId == userId)
-                .Include(y => y.Haber) //include
+                .Include(y => y.Haber) //includee
                 .Select(y => y.Haber) // Sadece ilişkili Haber nesnelerini seç
                 .ToListAsync();
 
