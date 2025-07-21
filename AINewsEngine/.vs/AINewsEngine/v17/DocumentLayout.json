@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\taha\\desktop\\ainewsengine\\ainewsengine\\ainewsengine\\controllers\\yerisaretlericontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\controllers\\yerisaretlericontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\taha\\desktop\\ainewsengine\\ainewsengine\\ainewsengine\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\taha\\desktop\\ainewsengine\\ainewsengine\\ainewsengine\\service\\rssservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\service\\rssservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\taha\\desktop\\ainewsengine\\ainewsengine\\ainewsengine\\controllers\\kategorilercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\controllers\\kategorilercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\taha\\desktop\\ainewsengine\\ainewsengine\\ainewsengine\\models\\haber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\models\\haber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\taha\\desktop\\ainewsengine\\ainewsengine\\ainewsengine\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\taha\\desktop\\ainewsengine\\ainewsengine\\ainewsengine\\controllers\\yerisaretlericontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\controllers\\yerisaretlericontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\taha\\desktop\\ainewsengine\\ainewsengine\\ainewsengine\\service\\rssservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\service\\rssservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\taha\\desktop\\ainewsengine\\ainewsengine\\ainewsengine\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -33,10 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\taha\\desktop\\ainewsengine\\ainewsengine\\ainewsengine\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\taha\\desktop\\ainewsengine\\ainewsengine\\ainewsengine\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\taha\\desktop\\ainewsengine\\ainewsengine\\ainewsengine\\data\\seeddate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,7 +70,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,7 +78,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
+              "Title": "KategorilerController.cs",
+              "DocumentMoniker": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Controllers\\KategorilerController.cs",
+              "RelativeDocumentMoniker": "AINewsEngine\\Controllers\\KategorilerController.cs",
+              "ToolTip": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Controllers\\KategorilerController.cs",
+              "RelativeToolTip": "AINewsEngine\\Controllers\\KategorilerController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-21T12:17:30.947Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\appsettings.json",
               "RelativeDocumentMoniker": "AINewsEngine\\appsettings.json",
@@ -87,7 +104,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Program.cs",
               "RelativeDocumentMoniker": "AINewsEngine\\Program.cs",
@@ -100,7 +117,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "VeritabaniContext.cs",
               "DocumentMoniker": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Data\\VeritabaniContext.cs",
               "RelativeDocumentMoniker": "AINewsEngine\\Data\\VeritabaniContext.cs",
@@ -112,7 +129,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "YerIsareti.cs",
               "DocumentMoniker": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Models\\YerIsareti.cs",
               "RelativeDocumentMoniker": "AINewsEngine\\Models\\YerIsareti.cs",
@@ -124,7 +141,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Kullanici.cs",
               "DocumentMoniker": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Models\\Kullanici.cs",
               "RelativeDocumentMoniker": "AINewsEngine\\Models\\Kullanici.cs",
@@ -136,7 +153,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "YerIsaretleriController.cs",
               "DocumentMoniker": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Controllers\\YerIsaretleriController.cs",
               "RelativeDocumentMoniker": "AINewsEngine\\Controllers\\YerIsaretleriController.cs",
@@ -149,7 +166,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Haber.cs",
               "DocumentMoniker": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Models\\Haber.cs",
               "RelativeDocumentMoniker": "AINewsEngine\\Models\\Haber.cs",
@@ -162,20 +179,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "WeatherForecastController.cs",
               "DocumentMoniker": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "AINewsEngine\\Controllers\\WeatherForecastController.cs",
               "ToolTip": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Controllers\\WeatherForecastController.cs",
               "RelativeToolTip": "AINewsEngine\\Controllers\\WeatherForecastController.cs",
-              "ViewState": "AgIAAIcAAAAAAAAAAAAiwI8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAJcAAAAAAAAAAAAuwKwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-08T06:05:52.245Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "RssService.cs",
               "DocumentMoniker": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Service\\RssService.cs",
               "RelativeDocumentMoniker": "AINewsEngine\\Service\\RssService.cs",
@@ -188,19 +205,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "AINewsEngine\\Controllers\\AuthController.cs",
               "ToolTip": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Controllers\\AuthController.cs",
               "RelativeToolTip": "AINewsEngine\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAqwGQAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAiwGQAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T11:57:56.378Z"
+              "WhenOpened": "2025-07-08T11:57:56.378Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "SeedDate.cs",
               "DocumentMoniker": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Data\\SeedDate.cs",
               "RelativeDocumentMoniker": "AINewsEngine\\Data\\SeedDate.cs",
@@ -212,7 +230,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "AINewsEngine\\Properties\\launchSettings.json",
@@ -224,7 +242,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "PagedResult.cs",
               "DocumentMoniker": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\DTOs\\PagedResult.cs",
               "RelativeDocumentMoniker": "AINewsEngine\\DTOs\\PagedResult.cs",
@@ -236,7 +254,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Kategori.cs",
               "DocumentMoniker": "C:\\Users\\taha\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Models\\Kategori.cs",
               "RelativeDocumentMoniker": "AINewsEngine\\Models\\Kategori.cs",
