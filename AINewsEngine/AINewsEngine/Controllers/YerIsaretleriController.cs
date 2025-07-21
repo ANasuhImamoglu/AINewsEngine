@@ -36,6 +36,14 @@ namespace AINewsEngine.Controllers
                 .Select(y => y.Haber) // Sadece ilişkili Haber nesnelerini seç
                 .ToListAsync();
 
+            foreach (var haber in haberler)
+            {
+                if (haber != null && !string.IsNullOrEmpty(haber.ResimYolu))
+                {
+                    haber.ResimYolu = $"/images/{haber.ResimYolu}";
+                }
+            }
+
             return Ok(haberler);
         }
 
