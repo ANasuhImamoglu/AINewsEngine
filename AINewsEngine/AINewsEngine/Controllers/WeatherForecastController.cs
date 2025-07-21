@@ -163,7 +163,7 @@ public class HaberlerController : ControllerBase
         return Ok(pagedResult);
     }
 
-    // PANEL API - Haber onaylama
+    // PANEL API - Haber onaylama endpoint
     [Authorize(Roles = "Admin,Moderator")]
     [HttpPut("{id}/approve")]
     public async Task<ActionResult<Haber>> ApproveHaber(int id)
