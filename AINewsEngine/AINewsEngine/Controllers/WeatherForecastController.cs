@@ -132,6 +132,16 @@ public class HaberlerController : ControllerBase
             .Take(pageSize)
             .ToListAsync();
 
+
+        foreach (var haber in items)
+        {
+            if (!string.IsNullOrEmpty(haber.ResimYolu))
+            {
+                // Örnek: "/images/haber1.jpg"
+                haber.ResimYolu = $"/images/{haber.ResimYolu}";
+            }
+        }
+
         // Sayfa bilgilerini hesaplýyoruz
         var totalPages = (int)Math.Ceiling(totalItems / (double)pageSize);
 
