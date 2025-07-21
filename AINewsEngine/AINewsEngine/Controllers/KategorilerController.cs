@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using AINewsEngine.Data;
 using AINewsEngine.Models;
+using Microsoft.AspNetCore.Authorization;
 
 [Route("api/[controller]")]
 [ApiController]
@@ -24,6 +25,7 @@ public class KategorilerController : ControllerBase
 
     // POST: api/Kategoriler
     // Yeni bir kategori oluşturur.
+    [Authorize(Roles = "Admin,Moderator")]
     [HttpPost]
     public async Task<ActionResult<Kategori>> PostKategori(Kategori kategori)
     {
