@@ -1,5 +1,177 @@
 [
   {
+    "ContainingType": "AINewsEngine.Controllers.YorumYonetimiController",
+    "Method": "GetBekleyenYorumlar",
+    "RelativePath": "api/admin/YorumYonetimi/bekleyen",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sayfa",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sayfaBoyutu",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AINewsEngine.DTOs.PagedResult\u00601[[AINewsEngine.DTOs.YorumDto, AINewsEngine, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AINewsEngine.Controllers.YorumYonetimiController",
+    "Method": "GetBekleyenYanitlar",
+    "RelativePath": "api/admin/YorumYonetimi/bekleyen-yanitlar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sayfa",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sayfaBoyutu",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AINewsEngine.DTOs.PagedResult\u00601[[AINewsEngine.DTOs.YorumYanitiDto, AINewsEngine, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AINewsEngine.Controllers.YorumYonetimiController",
+    "Method": "GetYorumIstatistikleri",
+    "RelativePath": "api/admin/YorumYonetimi/istatistikler",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AINewsEngine.Controllers.YorumYonetimiController",
+    "Method": "GetKullaniciYorumlari",
+    "RelativePath": "api/admin/YorumYonetimi/kullanici/{kullaniciId}/yorumlar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "kullaniciId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "sayfa",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sayfaBoyutu",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AINewsEngine.DTOs.PagedResult\u00601[[AINewsEngine.DTOs.YorumDto, AINewsEngine, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AINewsEngine.Controllers.YorumYonetimiController",
+    "Method": "YorumYanitiOnayla",
+    "RelativePath": "api/admin/YorumYonetimi/yanit/{id}/onayla",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AINewsEngine.Controllers.YorumYonetimiController",
+    "Method": "YorumYanitiReddet",
+    "RelativePath": "api/admin/YorumYonetimi/yanit/{id}/reddet",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AINewsEngine.Controllers.YorumYonetimiController",
+    "Method": "YorumOnayla",
+    "RelativePath": "api/admin/YorumYonetimi/yorum/{id}/onayla",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AINewsEngine.Controllers.YorumYonetimiController",
+    "Method": "YorumReddet",
+    "RelativePath": "api/admin/YorumYonetimi/yorum/{id}/reddet",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "AINewsEngine.Controllers.AuthController",
     "Method": "Login",
     "RelativePath": "api/Auth/login",
@@ -463,6 +635,230 @@
       {
         "Name": "haberId",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AINewsEngine.Controllers.YorumlarController",
+    "Method": "YorumEkle",
+    "RelativePath": "api/Yorumlar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "AINewsEngine.DTOs.YorumEkleDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AINewsEngine.DTOs.YorumDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AINewsEngine.Controllers.YorumlarController",
+    "Method": "GetYorum",
+    "RelativePath": "api/Yorumlar/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AINewsEngine.DTOs.YorumDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AINewsEngine.Controllers.YorumlarController",
+    "Method": "YorumSil",
+    "RelativePath": "api/Yorumlar/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AINewsEngine.Controllers.YorumlarController",
+    "Method": "YorumLike",
+    "RelativePath": "api/Yorumlar/{yorumId}/like",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "yorumId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "AINewsEngine.DTOs.YorumLikeDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AINewsEngine.Controllers.YorumlarController",
+    "Method": "YorumYanitiEkle",
+    "RelativePath": "api/Yorumlar/{yorumId}/yanitlar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "yorumId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "AINewsEngine.DTOs.YorumYanitiEkleDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AINewsEngine.DTOs.YorumYanitiDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AINewsEngine.Controllers.YorumlarController",
+    "Method": "GetHaberYorumlari",
+    "RelativePath": "api/Yorumlar/haber/{haberId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "haberId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "sayfa",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sayfaBoyutu",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sadeceonaylanan",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AINewsEngine.DTOs.PagedResult\u00601[[AINewsEngine.DTOs.YorumDto, AINewsEngine, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AINewsEngine.Controllers.YorumlarController",
+    "Method": "GetYorumYaniti",
+    "RelativePath": "api/Yorumlar/yanitlar/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AINewsEngine.DTOs.YorumYanitiDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AINewsEngine.Controllers.YorumlarController",
+    "Method": "YorumYanitiSil",
+    "RelativePath": "api/Yorumlar/yanitlar/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AINewsEngine.Controllers.YorumlarController",
+    "Method": "YorumYanitiLike",
+    "RelativePath": "api/Yorumlar/yanitlar/{yanitId}/like",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "yanitId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "AINewsEngine.DTOs.YorumLikeDto",
         "IsRequired": true
       }
     ],
