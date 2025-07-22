@@ -2,9 +2,11 @@
 
 using AINewsEngine.Service;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 [Route("api/[controller]")]
 [ApiController]
+[Authorize(Roles = "Admin,Moderator")]
 public class RssController : ControllerBase
 {
     private readonly IRssService _rssService;

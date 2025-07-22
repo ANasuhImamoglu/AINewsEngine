@@ -126,7 +126,7 @@ if (app.Environment.IsDevelopment())
 }
 
 // app.UseHttpsRedirection(); // HTTPS yönlendirmesi kapalı kalmalı
-
+app.UseStaticFiles();
 app.UseCors(MyAllowSpecificOrigins);
 
 // YENİ: Authentication middleware'ini ekliyoruz.

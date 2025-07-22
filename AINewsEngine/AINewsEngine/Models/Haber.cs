@@ -10,7 +10,7 @@ namespace AINewsEngine.Models
         [Required]
         public string Baslik { get; set; } = string.Empty;
         public string? Icerik { get; set; }
-        public string? ResimUrl { get; set; }
+        public string? ResimYolu { get; set; }
         public DateTime YayinTarihi { get; set; }
         public bool Onaylandi { get; set; }
 
