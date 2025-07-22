@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Asus\\Desktop\\AINewsEngine\\AINewsEngine\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\asus\\desktop\\ainewsengine\\ainewsengine\\ainewsengine\\models\\haber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\models\\haber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\asus\\desktop\\ainewsengine\\ainewsengine\\ainewsengine\\data\\veritabanicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\data\\veritabanicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\asus\\desktop\\ainewsengine\\ainewsengine\\ainewsengine\\controllers\\yerisaretlericontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\controllers\\yerisaretlericontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\asus\\desktop\\ainewsengine\\ainewsengine\\ainewsengine\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\asus\\desktop\\ainewsengine\\ainewsengine\\ainewsengine\\models\\yerisareti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\models\\yerisareti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\asus\\desktop\\ainewsengine\\ainewsengine\\ainewsengine\\controllers\\yerisaretlericontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\controllers\\yerisaretlericontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\asus\\desktop\\ainewsengine\\ainewsengine\\ainewsengine\\dtos\\pagedresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -39,14 +47,6 @@
       "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\data\\seeddate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\asus\\desktop\\ainewsengine\\ainewsengine\\ainewsengine\\models\\haber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\models\\haber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\asus\\desktop\\ainewsengine\\ainewsengine\\ainewsengine\\models\\yerisareti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\models\\yerisareti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|c:\\users\\asus\\desktop\\ainewsengine\\ainewsengine\\ainewsengine\\models\\kullanici.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FFF7A0A5-6B79-48FC-81B4-F6C3B0C57852}|AINewsEngine\\AINewsEngine.csproj|solutionrelative:ainewsengine\\models\\kullanici.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -66,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Document",
@@ -76,13 +76,14 @@
               "RelativeDocumentMoniker": "AINewsEngine\\Controllers\\WeatherForecastController.cs",
               "ToolTip": "C:\\Users\\Asus\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Controllers\\WeatherForecastController.cs",
               "RelativeToolTip": "AINewsEngine\\Controllers\\WeatherForecastController.cs",
-              "ViewState": "AgIAAM4AAAAAAAAAAAA6wNgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAANgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T06:05:52.245Z"
+              "WhenOpened": "2025-07-08T06:05:52.245Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "PagedResult.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\DTOs\\PagedResult.cs",
               "RelativeDocumentMoniker": "AINewsEngine\\DTOs\\PagedResult.cs",
@@ -94,7 +95,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "AINewsEngine\\Properties\\launchSettings.json",
@@ -106,7 +107,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\appsettings.json",
               "RelativeDocumentMoniker": "AINewsEngine\\appsettings.json",
@@ -118,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Program.cs",
               "RelativeDocumentMoniker": "AINewsEngine\\Program.cs",
@@ -130,7 +131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "SeedDate.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Data\\SeedDate.cs",
               "RelativeDocumentMoniker": "AINewsEngine\\Data\\SeedDate.cs",
@@ -142,7 +143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "AINewsEngine\\Controllers\\AuthController.cs",
@@ -154,28 +155,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "VeritabaniContext.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Data\\VeritabaniContext.cs",
               "RelativeDocumentMoniker": "AINewsEngine\\Data\\VeritabaniContext.cs",
               "ToolTip": "C:\\Users\\Asus\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Data\\VeritabaniContext.cs",
               "RelativeToolTip": "AINewsEngine\\Data\\VeritabaniContext.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAUwFkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADEAAAAAAAAAAAAAAFkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-08T11:46:16.695Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 3,
               "Title": "YerIsareti.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Models\\YerIsareti.cs",
               "RelativeDocumentMoniker": "AINewsEngine\\Models\\YerIsareti.cs",
               "ToolTip": "C:\\Users\\Asus\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Models\\YerIsareti.cs",
               "RelativeToolTip": "AINewsEngine\\Models\\YerIsareti.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAYwAgAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T11:45:51.629Z"
+              "WhenOpened": "2025-07-08T11:45:51.629Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -203,7 +205,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 0,
               "Title": "Haber.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Models\\Haber.cs",
               "RelativeDocumentMoniker": "AINewsEngine\\Models\\Haber.cs",
@@ -211,11 +213,12 @@
               "RelativeToolTip": "AINewsEngine\\Models\\Haber.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T07:12:14.411Z"
+              "WhenOpened": "2025-07-07T07:12:14.411Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "YerIsaretleriController.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AINewsEngine\\AINewsEngine\\AINewsEngine\\Controllers\\YerIsaretleriController.cs",
               "RelativeDocumentMoniker": "AINewsEngine\\Controllers\\YerIsaretleriController.cs",
