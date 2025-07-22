@@ -431,3 +431,5 @@ C:\Users\Asus\Desktop\AINewsEngine\AINewsEngine\AINewsEngine\obj\Debug\net8.0\AI
 C:\Users\Asus\Desktop\AINewsEngine\AINewsEngine\AINewsEngine\obj\Debug\net8.0\AINewsEngine.genruntimeconfig.cache
 C:\Users\Asus\Desktop\AINewsEngine\AINewsEngine\AINewsEngine\obj\Debug\net8.0\ref\AINewsEngine.dll
 C:\Users\Asus\Desktop\AINewsEngine\AINewsEngine\AINewsEngine\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\taha\Desktop\AINewsEngine\AINewsEngine\AINewsEngine\bin\Debug\net8.0\AINewsEngine.staticwebassets.runtime.json
+C:\Users\taha\Desktop\AINewsEngine\AINewsEngine\AINewsEngine\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

@@ -120,7 +120,7 @@ namespace AINewsEngine.Controllers
                 HaberId = dto.HaberId,
                 KullaniciId = kullaniciId,
                 OlusturmaTarihi = DateTime.UtcNow,
-                Onaylandi = false // Varsayılan olarak onay bekler
+                Onaylandi = true // Varsayılan olarak onay bekler
             };
 
             _context.Yorumlar.Add(yorum);
@@ -174,7 +174,7 @@ namespace AINewsEngine.Controllers
                 YorumId = yorumId,
                 KullaniciId = kullaniciId,
                 OlusturmaTarihi = DateTime.UtcNow,
-                Onaylandi = false // Varsayılan olarak onay bekler
+                Onaylandi = true // Varsayılan olarak onay bekler
             };
 
             _context.YorumYanitlari.Add(yorumYaniti);
