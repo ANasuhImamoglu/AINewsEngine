@@ -19,7 +19,7 @@ public class HaberlerController : ControllerBase
     }
 
     // PANEL API - GET: api/Haberler?page=1&pageSize=10&kategoriId=1
-    // Admin paneli için - TÜM haberleri gösterir (onaylanmamýþ dahil)
+    // Admin paneli iï¿½in - Tï¿½M haberleri gï¿½sterir (onaylanmamï¿½ï¿½ dahil)
     [ResponseCache(NoStore = true, Location = ResponseCacheLocation.None)]
     [HttpGet]
     public async Task<ActionResult<object>> GetHaberler(
@@ -27,12 +27,12 @@ public class HaberlerController : ControllerBase
         [FromQuery] int pageSize = 10,
         [FromQuery] int? kategoriId = null)
     {
-        // Sayfa numarasý 1'den baþlamalý
+        // Sayfa numarasï¿½ 1'den baï¿½lamalï¿½
         if (page < 1) page = 1;
         if (pageSize < 1) pageSize = 10;
         if (pageSize > 100) pageSize = 100; // Maksimum limit
 
-        // Temel sorgu: TÜM haberleri al (admin paneli için onaylanmamýþ olanlar da görünmeli)
+        // Temel sorgu: Tï¿½M haberleri al (admin paneli iï¿½in onaylanmamï¿½ï¿½ olanlar da gï¿½rï¿½nmeli)
         IQueryable<Haber> query = _context.Haberler.AsNoTracking();
 
         // Kategori filtresi varsa uygula
@@ -41,12 +41,12 @@ public class HaberlerController : ControllerBase
             query = query.Where(h => h.KategoriId == kategoriId.Value);
         }
 
-        // Toplam kayýt sayýsý
+        // Toplam kayï¿½t sayï¿½sï¿½
         var totalCount = await query.CountAsync();
 
-        // Sayfalama ile veri çekme
+        // Sayfalama ile veri ï¿½ekme
         var haberler = await query
-            .OrderByDescending(h => h.YayinTarihi) // En yeni haberler önce
+            .OrderByDescending(h => h.YayinTarihi) // En yeni haberler ï¿½nce
             .Skip((page - 1) * pageSize)
             .Take(pageSize)
             .ToListAsync();
@@ -59,19 +59,19 @@ public class HaberlerController : ControllerBase
     }
 
     // PANEL API - GET: api/Haberler/search?term=kelime&page=1&pageSize=10
-    // Admin paneli için arama
+    // Admin paneli iï¿½in arama
     [HttpGet("search")]
     public async Task<ActionResult<object>> SearchHaberler(
         [FromQuery] string term,
         [FromQuery] int page = 1,
         [FromQuery] int pageSize = 10)
     {
-        // Sayfa numarasý 1'den baþlamalý
+        // Sayfa numarasï¿½ 1'den baï¿½lamalï¿½
         if (page < 1) page = 1;
         if (pageSize < 1) pageSize = 10;
         if (pageSize > 100) pageSize = 100; // Maksimum limit
 
-        // Temel sorgu: TÜM haberleri al (admin paneli için)
+        // Temel sorgu: Tï¿½M haberleri al (admin paneli iï¿½in)
         IQueryable<Haber> query = _context.Haberler.AsNoTracking();
 
         // Arama terimi varsa filtrele
@@ -84,12 +84,12 @@ public class HaberlerController : ControllerBase
             );
         }
 
-        // Toplam kayýt sayýsý (filtrelenmiþ)
+        // Toplam kayï¿½t sayï¿½sï¿½ (filtrelenmiï¿½)
         var totalCount = await query.CountAsync();
 
-        // Sayfalama ile veri çekme
+        // Sayfalama ile veri ï¿½ekme
         var haberler = await query
-            .OrderByDescending(h => h.YayinTarihi) // En yeni haberler önce
+            .OrderByDescending(h => h.YayinTarihi) // En yeni haberler ï¿½nce
             .Skip((page - 1) * pageSize)
             .Take(pageSize)
             .ToListAsync();
@@ -102,14 +102,14 @@ public class HaberlerController : ControllerBase
     }
 
     // FLUTTER API - GET: api/Haberler/paged?pageNumber=1&pageSize=10&kategoriId=1
-    // Flutter için - SADECE onaylanmýþ haberleri gösterir
+    // Flutter iï¿½in - SADECE onaylanmï¿½ï¿½ haberleri gï¿½sterir
     [HttpGet("paged")]
     public async Task<ActionResult<PagedResult<Haber>>> GetPagedHaberler(
         [FromQuery] int pageNumber = 1,
         [FromQuery] int pageSize = 10,
         [FromQuery] int? kategoriId = null)
     {
-        // Temel sorgu: Sadece onaylanmýþ haberleri al (Flutter için)
+        // Temel sorgu: Sadece onaylanmï¿½ï¿½ haberleri al (Flutter iï¿½in)
         var query = _context.Haberler
                             .Where(h => h.Onaylandi == true)
                             .AsNoTracking();
@@ -120,19 +120,29 @@ public class HaberlerController : ControllerBase
             query = query.Where(h => h.KategoriId == kategoriId.Value);
         }
 
-        // Sýralamayý filtrelemeden sonra yapýyoruz
+        // Sï¿½ralamayï¿½ filtrelemeden sonra yapï¿½yoruz
         query = query.OrderByDescending(h => h.YayinTarihi);
 
-        // Toplam haber sayýsýný alýyoruz
+        // Toplam haber sayï¿½sï¿½nï¿½ alï¿½yoruz
         var totalItems = await query.CountAsync();
 
-        // Veritabanýndan sadece ilgili sayfadaki haberleri çekiyoruz
+        // Veritabanï¿½ndan sadece ilgili sayfadaki haberleri ï¿½ekiyoruz
         var items = await query
             .Skip((pageNumber - 1) * pageSize)
             .Take(pageSize)
             .ToListAsync();
 
-        // Sayfa bilgilerini hesaplýyoruz
+
+        foreach (var haber in items)
+        {
+            if (!string.IsNullOrEmpty(haber.ResimYolu))
+            {
+                // ï¿½rnek: "/images/haber1.jpg"
+                haber.ResimYolu = $"/images/{haber.ResimYolu}";
+            }
+        }
+
+        // Sayfa bilgilerini hesaplï¿½yoruz
         var totalPages = (int)Math.Ceiling(totalItems / (double)pageSize);
 
         var paginationInfo = new PaginationInfo
@@ -143,7 +153,7 @@ public class HaberlerController : ControllerBase
             TotalPages = totalPages
         };
 
-        // Sayfalanmýþ sonucu oluþturup döndürüyoruz
+        // Sayfalanmï¿½ï¿½ sonucu oluï¿½turup dï¿½ndï¿½rï¿½yoruz
         var pagedResult = new PagedResult<Haber>
         {
             Items = items,
@@ -153,7 +163,8 @@ public class HaberlerController : ControllerBase
         return Ok(pagedResult);
     }
 
-    // PANEL API - Haber onaylama
+    // PANEL API - Haber onaylama endpoint
+    [Authorize(Roles = "Admin,Moderator")]
     [HttpPut("{id}/approve")]
     public async Task<ActionResult<Haber>> ApproveHaber(int id)
     {
@@ -169,7 +180,7 @@ public class HaberlerController : ControllerBase
         return Ok(haber);
     }
 
-    // PANEL API - Okunma sayýsýný artýrma
+    // PANEL API - Okunma sayï¿½sï¿½nï¿½ artï¿½rma
     [HttpPut("{id}/increment-read")]
     public async Task<ActionResult> IncrementReadCount(int id)
     {
@@ -185,7 +196,7 @@ public class HaberlerController : ControllerBase
         return Ok();
     }
 
-    // PANEL API - Týklanma sayýsýný artýrma  
+    // PANEL API - Tï¿½klanma sayï¿½sï¿½nï¿½ artï¿½rma  
     [HttpPut("{id}/increment-click")]
     public async Task<ActionResult> IncrementClickCount(int id)
     {
@@ -202,7 +213,7 @@ public class HaberlerController : ControllerBase
     }
 
     // FLUTTER API - GET: api/Haberler/5
-    // ID'ye göre tek bir haber getirir
+    // ID'ye gï¿½re tek bir haber getirir
     [HttpGet("{id}")]
     public async Task<ActionResult<Haber>> GetHaber(int id)
     {
@@ -219,7 +230,8 @@ public class HaberlerController : ControllerBase
     }
 
     // FLUTTER API - PUT: api/Haberler/5
-    // Mevcut bir haberi günceller
+    // Mevcut bir haberi gï¿½nceller
+    [Authorize(Roles = "Admin,Moderator")]
     [HttpPut("{id}")]
     public async Task<IActionResult> PutHaber(int id, Haber haber)
     {
@@ -250,19 +262,21 @@ public class HaberlerController : ControllerBase
     }
 
     // FLUTTER API - POST: api/Haberler
-    // Yeni bir haber oluþturur
+    // Yeni bir haber oluï¿½turur
+    [Authorize(Roles = "Admin,Moderator")]
     [HttpPost]
     public async Task<ActionResult<Haber>> PostHaber(Haber haber)
     {
         _context.Haberler.Add(haber);
         await _context.SaveChangesAsync();
 
-        // Oluþturulan kaynaðýn konumunu header'da döndürür.
+        // Oluï¿½turulan kaynaï¿½ï¿½n konumunu header'da dï¿½ndï¿½rï¿½r.
         return CreatedAtAction("GetHaber", new { id = haber.Id }, haber);
     }
 
     // FLUTTER API - DELETE: api/Haberler/5
     // Bir haberi siler
+    [Authorize(Roles = "Admin,Moderator")]
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteHaber(int id)
     {
@@ -278,7 +292,7 @@ public class HaberlerController : ControllerBase
         return NoContent();
     }
 
-    // FLUTTER API - Týklanma sayacýný artýrma
+    // FLUTTER API - Tï¿½klanma sayacï¿½nï¿½ artï¿½rma
     [HttpPost("{id}/tiklandi")]
     public async Task<IActionResult> TiklanmaArtir(int id)
     {
@@ -294,7 +308,7 @@ public class HaberlerController : ControllerBase
         return Ok();
     }
 
-    // FLUTTER API - Okunma sayacýný artýrma
+    // FLUTTER API - Okunma sayacï¿½nï¿½ artï¿½rma
     [HttpPost("{id}/okundu")]
     public async Task<IActionResult> OkunmaArtir(int id)
     {
@@ -324,10 +338,10 @@ public class HaberlerController : ControllerBase
         haber.Onaylandi = true;
         await _context.SaveChangesAsync();
 
-        return Ok(new { message = "Haber baþarýyla onaylandý." });
+        return Ok(new { message = "Haber baï¿½arï¿½yla onaylandï¿½." });
     }
 
-    // FLUTTER API - En çok okunan haberleri getir
+    // FLUTTER API - En ï¿½ok okunan haberleri getir
     [HttpGet("most-read")]
     public async Task<ActionResult<List<Haber>>> GetMostReadNews()
     {
@@ -341,7 +355,7 @@ public class HaberlerController : ControllerBase
         return Ok(mostReadNews);
     }
 
-    // FLUTTER API - En çok týklanan haberleri getir
+    // FLUTTER API - En ï¿½ok tï¿½klanan haberleri getir
     [HttpGet("most-clicked")]
     public async Task<ActionResult<List<Haber>>> GetMostClickedNews()
     {
@@ -360,7 +374,7 @@ public class HaberlerController : ControllerBase
 
 
     [HttpGet("GetTop5ReadNews")]
-    public async Task<IActionResult> GetTOP5ReadNews() // Metod adýný da GetMostReadNews olarak deðiþtirdim
+    public async Task<IActionResult> GetTOP5ReadNews() // Metod adÄ±nÄ± da GetMostReadNews olarak deÄŸiÅŸtirdim
     {
         return Ok(await _context.Haberler.OrderByDescending(h => h.OkunmaSayisi).Take(5).ToListAsync());
     }
@@ -369,15 +383,15 @@ public class HaberlerController : ControllerBase
    
     
     [HttpGet("GetTop5ClickedNews")]
-    public async Task<IActionResult> GetTOP5ClickedNews() // Metod adýný da GetMostClickedNews olarak deðiþtirdim
+    public async Task<IActionResult> GetTOP5ClickedNews() // Metod adÄ±nÄ± da GetMostClickedNews olarak deÄŸiÅŸtirdim
     {
         return Ok(await _context.Haberler.OrderByDescending(h => h.TiklanmaSayisi).Take(5).ToListAsync());
     }
 
-    //// === En Çok Týklanan Haberler Endpoint'i ===
+    //// === En Ã‡ok TÄ±klanan Haberler Endpoint'i ===
     //// Tam URL: api/News/most-clicked-news
     //[HttpGet("most-clicked-news")]
-    //public async Task<IActionResult> GetMostClickedNews() // Metod adýný da GetMostClickedNews olarak deðiþtirdim
+    //public async Task<IActionResult> GetMostClickedNews() // Metod adÄ±nÄ± da GetMostClickedNews olarak deÄŸiÅŸtirdim
     //{
     //    return Ok(await _context.Haberler.OrderByDescending(h => h.TiklanmaSayisi).Take(5).ToListAsync());
     //}
@@ -385,7 +399,7 @@ public class HaberlerController : ControllerBase
 
 
 
-    // Yardýmcý metod
+    // YardÄ±mcÄ± metod
     private bool HaberExists(int id)
     {
         return _context.Haberler.Any(e => e.Id == id);

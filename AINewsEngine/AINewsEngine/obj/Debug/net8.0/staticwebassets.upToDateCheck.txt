@@ -1,0 +1,8 @@
+wwwroot\images\haber1.jpg
+wwwroot\images\haber2.jpg
+wwwroot\images\haber3.jpg
+wwwroot\images\haber4.jpg
+wwwroot\images\haber5.jpg
+wwwroot\images\haber6.jpg
+wwwroot\images\haber7.jpg
+wwwroot\images\haber8.jpg

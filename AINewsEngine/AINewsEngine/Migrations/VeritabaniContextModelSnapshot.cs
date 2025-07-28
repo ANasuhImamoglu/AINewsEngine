@@ -39,7 +39,7 @@ namespace AINewsEngine.Migrations
                     b.Property<bool>("Onaylandi")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("ResimUrl")
+                    b.Property<string>("ResimYolu")
                         .HasColumnType("TEXT");
 
                     b.Property<int>("TiklanmaSayisi")
@@ -154,6 +154,111 @@ namespace AINewsEngine.Migrations
                     b.HasIndex("KullaniciId");
 
                     b.ToTable("YerIsaretleri");
+                });
+
+            modelBuilder.Entity("AINewsEngine.Models.Yorum", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("HaberId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Icerik")
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("KullaniciId")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("OlusturmaTarihi")
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool>("Onaylandi")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("HaberId");
+
+                    b.HasIndex("KullaniciId");
+
+                    b.ToTable("Yorumlar");
+                });
+
+            modelBuilder.Entity("AINewsEngine.Models.YorumLike", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("IsLike")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("KullaniciId")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("OlusturmaTarihi")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int?>("YorumId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("YorumYanitiId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("YorumId");
+
+                    b.HasIndex("YorumYanitiId");
+
+                    b.HasIndex("KullaniciId", "YorumId")
+                        .IsUnique()
+                        .HasFilter("[YorumId] IS NOT NULL");
+
+                    b.HasIndex("KullaniciId", "YorumYanitiId")
+                        .IsUnique()
+                        .HasFilter("[YorumYanitiId] IS NOT NULL");
+
+                    b.ToTable("YorumLikes");
+                });
+
+            modelBuilder.Entity("AINewsEngine.Models.YorumYaniti", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Icerik")
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("KullaniciId")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("OlusturmaTarihi")
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool>("Onaylandi")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("YorumId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("KullaniciId");
+
+                    b.HasIndex("YorumId");
+
+                    b.ToTable("YorumYanitlari");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -312,6 +417,69 @@ namespace AINewsEngine.Migrations
                     b.Navigation("Kullanici");
                 });
 
+            modelBuilder.Entity("AINewsEngine.Models.Yorum", b =>
+                {
+                    b.HasOne("AINewsEngine.Models.Haber", "Haber")
+                        .WithMany()
+                        .HasForeignKey("HaberId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("AINewsEngine.Models.Kullanici", "Kullanici")
+                        .WithMany()
+                        .HasForeignKey("KullaniciId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Haber");
+
+                    b.Navigation("Kullanici");
+                });
+
+            modelBuilder.Entity("AINewsEngine.Models.YorumLike", b =>
+                {
+                    b.HasOne("AINewsEngine.Models.Kullanici", "Kullanici")
+                        .WithMany()
+                        .HasForeignKey("KullaniciId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("AINewsEngine.Models.Yorum", "Yorum")
+                        .WithMany("Likes")
+                        .HasForeignKey("YorumId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("AINewsEngine.Models.YorumYaniti", "YorumYaniti")
+                        .WithMany("Likes")
+                        .HasForeignKey("YorumYanitiId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.Navigation("Kullanici");
+
+                    b.Navigation("Yorum");
+
+                    b.Navigation("YorumYaniti");
+                });
+
+            modelBuilder.Entity("AINewsEngine.Models.YorumYaniti", b =>
+                {
+                    b.HasOne("AINewsEngine.Models.Kullanici", "Kullanici")
+                        .WithMany()
+                        .HasForeignKey("KullaniciId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("AINewsEngine.Models.Yorum", "Yorum")
+                        .WithMany("Yanitlar")
+                        .HasForeignKey("YorumId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Kullanici");
+
+                    b.Navigation("Yorum");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -366,6 +534,18 @@ namespace AINewsEngine.Migrations
             modelBuilder.Entity("AINewsEngine.Models.Kategori", b =>
                 {
                     b.Navigation("Haberler");
+                });
+
+            modelBuilder.Entity("AINewsEngine.Models.Yorum", b =>
+                {
+                    b.Navigation("Likes");
+
+                    b.Navigation("Yanitlar");
+                });
+
+            modelBuilder.Entity("AINewsEngine.Models.YorumYaniti", b =>
+                {
+                    b.Navigation("Likes");
                 });
 #pragma warning restore 612, 618
         }

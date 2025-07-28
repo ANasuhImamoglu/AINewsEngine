@@ -62,7 +62,7 @@ namespace AINewsEngine.Services
                             Baslik = yeniBaslik ?? orijinalBaslik,
                             Icerik = yeniIcerik,
                             YayinTarihi = item.PublishDate.DateTime,
-                            ResimUrl = null, // Resim URL'si alınmıyor
+                            ResimYolu = null, // Resim URL'si alınmıyor
                             Onaylandi = false,
                             // DEĞİŞİKLİK: Gelen kategori ID'sini yeni habere atıyoruz.
                             KategoriId = kategoriId
