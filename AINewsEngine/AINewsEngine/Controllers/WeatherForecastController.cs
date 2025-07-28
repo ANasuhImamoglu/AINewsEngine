@@ -355,6 +355,36 @@ public class HaberlerController : ControllerBase
         return Ok(mostClickedNews);
     }
 
+
+
+
+
+    [HttpGet("GetTop5ReadNews")]
+    public async Task<IActionResult> GetTOP5ReadNews() // Metod adýný da GetMostReadNews olarak deðiþtirdim
+    {
+        return Ok(await _context.Haberler.OrderByDescending(h => h.OkunmaSayisi).Take(5).ToListAsync());
+    }
+
+
+   
+    
+    [HttpGet("GetTop5ClickedNews")]
+    public async Task<IActionResult> GetTOP5ClickedNews() // Metod adýný da GetMostClickedNews olarak deðiþtirdim
+    {
+        return Ok(await _context.Haberler.OrderByDescending(h => h.TiklanmaSayisi).Take(5).ToListAsync());
+    }
+
+    //// === En Çok Týklanan Haberler Endpoint'i ===
+    //// Tam URL: api/News/most-clicked-news
+    //[HttpGet("most-clicked-news")]
+    //public async Task<IActionResult> GetMostClickedNews() // Metod adýný da GetMostClickedNews olarak deðiþtirdim
+    //{
+    //    return Ok(await _context.Haberler.OrderByDescending(h => h.TiklanmaSayisi).Take(5).ToListAsync());
+    //}
+
+
+
+
     // Yardýmcý metod
     private bool HaberExists(int id)
     {
