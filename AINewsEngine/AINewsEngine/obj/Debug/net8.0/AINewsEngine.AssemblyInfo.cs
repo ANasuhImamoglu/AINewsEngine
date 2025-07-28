@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AINewsEngine")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2ec9a281d5f32e46f37d5ed4ba0054282f16739b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+784a1a09ff490da513c3652bf1456ae74742dde3")]
 [assembly: System.Reflection.AssemblyProductAttribute("AINewsEngine")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AINewsEngine")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
