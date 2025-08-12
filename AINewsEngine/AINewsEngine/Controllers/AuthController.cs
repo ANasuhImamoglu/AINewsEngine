@@ -41,6 +41,13 @@ namespace AINewsEngine.Controllers
             {
                 // Hata detaylarını döndürmek daha bilgilendirici olur.
                 var errors = result.Errors.Select(e => e.Description).ToList();
+
+                //UI da hesap olıuştururken şartlar sağlansa bile hata alıyoruz.
+                //ancak hesap db de rol atanmış bir şekilde görünüyor ayrıca daha sonrasında login de olunabiliyor 
+                //hatayı çözme amaçlı bir hata mesajı yazıyorum made by IMAMOGLU
+                Console.WriteLine("Kullanıcı oluşturma hatası: {0}", string.Join(", ", result.Errors.Select(e => e.Description)));
+
+
                 return StatusCode(StatusCodes.Status500InternalServerError, new { Status = "Error", Message = "Kullanıcı oluşturulamadı.", Errors = errors });
             }
 

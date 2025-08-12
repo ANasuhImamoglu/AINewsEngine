@@ -102,6 +102,8 @@ builder.Services.AddSwaggerGen(c =>
         }
     });
 });
+// NewsFetcherService'i kaydet
+builder.Services.AddHostedService<NewsFetcherService>();
 
 var app = builder.Build();
 

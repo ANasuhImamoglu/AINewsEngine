@@ -1,0 +1,53 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\ahmet\\OneDrive\\Belgeler\\AINewsEngineProject\\AINewsEngine\\AINewsEngine\\AINewsEngine\\wwwroot\\images\\haber1.jpg",
+      "PackagePath": "staticwebassets\\images\\haber1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ahmet\\OneDrive\\Belgeler\\AINewsEngineProject\\AINewsEngine\\AINewsEngine\\AINewsEngine\\wwwroot\\images\\haber2.jpg",
+      "PackagePath": "staticwebassets\\images\\haber2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ahmet\\OneDrive\\Belgeler\\AINewsEngineProject\\AINewsEngine\\AINewsEngine\\AINewsEngine\\wwwroot\\images\\haber3.jpg",
+      "PackagePath": "staticwebassets\\images\\haber3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ahmet\\OneDrive\\Belgeler\\AINewsEngineProject\\AINewsEngine\\AINewsEngine\\AINewsEngine\\wwwroot\\images\\haber4.jpg",
+      "PackagePath": "staticwebassets\\images\\haber4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ahmet\\OneDrive\\Belgeler\\AINewsEngineProject\\AINewsEngine\\AINewsEngine\\AINewsEngine\\wwwroot\\images\\haber5.jpg",
+      "PackagePath": "staticwebassets\\images\\haber5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ahmet\\OneDrive\\Belgeler\\AINewsEngineProject\\AINewsEngine\\AINewsEngine\\AINewsEngine\\wwwroot\\images\\haber6.jpg",
+      "PackagePath": "staticwebassets\\images\\haber6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ahmet\\OneDrive\\Belgeler\\AINewsEngineProject\\AINewsEngine\\AINewsEngine\\AINewsEngine\\wwwroot\\images\\haber7.jpg",
+      "PackagePath": "staticwebassets\\images\\haber7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ahmet\\OneDrive\\Belgeler\\AINewsEngineProject\\AINewsEngine\\AINewsEngine\\AINewsEngine\\wwwroot\\images\\haber8.jpg",
+      "PackagePath": "staticwebassets\\images\\haber8.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.AINewsEngine.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.AINewsEngine.props",
+      "PackagePath": "build\\AINewsEngine.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.AINewsEngine.props",
+      "PackagePath": "buildMultiTargeting\\AINewsEngine.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.AINewsEngine.props",
+      "PackagePath": "buildTransitive\\AINewsEngine.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
