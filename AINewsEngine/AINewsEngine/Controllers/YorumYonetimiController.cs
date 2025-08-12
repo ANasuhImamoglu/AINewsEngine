@@ -9,7 +9,8 @@ namespace AINewsEngine.Controllers
 {
     [ApiController]
     [Route("api/admin/[controller]")]
-    [Authorize] // Bu kontrolöre sadece giriş yapmış kullanıcılar erişebilir
+    [Authorize(Roles = "Admin,Moderator")]
+    // Bu kontrolöre sadece giriş yapmış kullanıcılar erişebilir hayır admin ve moderatör erişebilmeli
     public class YorumYonetimiController : ControllerBase
     {
         private readonly VeritabaniContext _context;
